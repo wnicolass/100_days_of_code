@@ -7,3 +7,9 @@
 - What is URL (Uniform Resource Locator)
 - How to create a website
 ##
+### Day 2: First dive into HTML and CSS basics
+- What is HTML (HyperText Markup Languague)
+- What is CSS (Cascading Style Sheets)
+- Understanding HTML Elements
+- HTML attributes
+##
