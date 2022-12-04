@@ -13,3 +13,10 @@
 - Understanding HTML Elements
 - HTML attributes
 ##
+### Day 3: More about HTML and CSS basics
+- Working with CSS colors
+- Formatting the code
+- Introducing Developer Tools
+- Style and Link tags
+- CSS Rules
+##
