@@ -19,4 +19,5 @@
 - Introducing Developer Tools
 - Style and Link tags
 - CSS Rules
+- The anatomy of a valid HTML document (head -> metadata, body -> content)
 ##
