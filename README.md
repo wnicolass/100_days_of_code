@@ -28,3 +28,10 @@
 - The link element and how the browser works with it
 - CSS Size Units
 ##
+### Day 5: More HTML tags and CSS properties
+- First contact with img tag
+- New CSS properties
+- Adding new HTML files
+- More styling on the page
+- First summary
+##
