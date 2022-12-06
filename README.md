@@ -21,3 +21,10 @@
 - CSS Rules
 - The anatomy of a valid HTML document (head -> metadata, body -> content)
 ##
+### Day 4: More HTML and CSS concepts
+- Pseudo selector: hover
+- Multiple CSS rules
+- Void elements
+- The link element and how the browser works with it
+- CSS Size Units
+##
