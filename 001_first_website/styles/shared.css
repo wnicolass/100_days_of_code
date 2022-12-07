@@ -13,11 +13,11 @@ p {
   font-family: "Fira Sans", sans-serif;
 }
 
-p a {
+a {
   color: rgb(167, 1, 78);
   text-decoration: none;
 }
 
-p a:hover {
+a:hover {
   text-decoration: underline;
 }
