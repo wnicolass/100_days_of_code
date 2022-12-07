@@ -1,3 +1,19 @@
+h1 {
+  font-size: 48px;
+}
+
+a {
+  background-color: rgb(167, 1, 78);
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+a:hover {
+  background-color: rgb(180, 12, 90);
+  text-decoration: none;
+}
+
 ol {
   list-style: none;
 }
