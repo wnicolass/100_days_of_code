@@ -18,5 +18,8 @@ ol {
   list-style: none;
 }
 
-/* li {
-} */
+li {
+  margin: 32px;
+  background-color: rgb(223, 136, 124);
+  border-radius: 6px;
+}
