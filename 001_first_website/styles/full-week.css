@@ -32,3 +32,8 @@ li {
   background-color: rgb(223, 136, 124);
   border-radius: 6px;
 }
+
+h2 {
+  color: rgb(78, 13, 5);
+  font-family: "Oswald", sans-serif;
+}
