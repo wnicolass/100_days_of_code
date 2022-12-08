@@ -3,6 +3,10 @@ h1 {
   margin: 12px 0;
 }
 
+#description {
+  margin-bottom: 36px;
+}
+
 a {
   background-color: rgb(167, 1, 78);
   color: #fff;
