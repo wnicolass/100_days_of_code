@@ -1,3 +1,7 @@
+header {
+  margin-bottom: 64px;
+}
+
 h1 {
   font-size: 48px;
   margin: 12px 0;
@@ -36,4 +40,13 @@ li {
 h2 {
   color: rgb(78, 13, 5);
   font-family: "Oswald", sans-serif;
+}
+
+main p {
+  margin: 12px;
+  color: rgb(78, 13, 5);
+}
+
+.highlight-goal {
+  background-color: rgb(226, 115, 101);
 }
