@@ -41,3 +41,10 @@
 - Cascading: Multiple rules can be applied to the same element
 - Specificity: More specific selector's rule wins over less specific rule
 ##
+### Day 7: Semantic HTML and CSS Box Model
+- Box Model: content, padding, border and margin
+- First contact with semantic HTML elements `<header>`, `<main>`, `<footer>`
+- CSS Selectors & Combinators
+- Block Elements vs Inline Elements
+- Common inline elements `<a>`, `<button>`, `<img>`, `<span>`
+##
