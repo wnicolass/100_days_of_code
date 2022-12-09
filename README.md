@@ -48,3 +48,10 @@
 - Block Elements vs Inline Elements
 - Common inline elements `<a>`, `<button>`, `<img>`, `<span>`
 ##
+### Day 8: More CSS concepts
+- Inline elements and how they behave with margin and padding
+- Display inline-block
+- Margin collapse
+- First look at box-shadow
+- Replaced and Non-replaced inline elements
+##
