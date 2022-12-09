@@ -16,6 +16,7 @@ p {
 a {
   color: rgb(167, 1, 78);
   text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
 }
 
 a:hover {
