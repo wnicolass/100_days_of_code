@@ -2,14 +2,32 @@ body {
   margin: 50px;
 }
 
+h1 {
+  color: #000;
+}
+
+h1 span {
+  color: #4c1414;
+}
+
 img {
   width: 200px;
   height: 200px;
   border-radius: 100px;
+  border: 5px solid #000;
+}
+
+main {
+  border: 5px solid #000;
+  background-color: rgb(226, 115, 101);
 }
 
 #todays-challenge {
-  color: rgb(170, 96, 83);
+  color: rgb(79, 48, 43);
   font-weight: bold;
   font-size: 52px;
+}
+
+p {
+  margin-top: 40px;
 }
