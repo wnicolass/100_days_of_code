@@ -4,12 +4,12 @@ header {
 
 h1 {
   font-size: 48px;
-  margin: 16px 0;
+  margin: 0;
 }
 
 #description {
-  margin-top: 0;
-  margin-bottom: 36px;
+  margin-top: 16px;
+  margin-bottom: 30px;
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 
   border-radius: 4px;
   padding: 12px 48px;
-  margin: 12px 0px;
 
   display: inline-block;
 }
