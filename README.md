@@ -55,3 +55,9 @@
 - First look at box-shadow
 - Replaced and Non-replaced inline elements
 ##
+### Day 9: HTML & CSS Summary (Project Challenge)
+- First project with all the content learned so far
+- Box Model
+- Displays
+- Semantic HTML
+##
