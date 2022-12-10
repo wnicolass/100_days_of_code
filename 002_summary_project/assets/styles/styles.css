@@ -1,20 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 body {
-  text-align: center;
   background-color: #f3e9ff;
   font-family: "Noto Sans", sans-serif;
-  margin: 0 20px;
+  text-align: center;
+}
+
+header {
+  padding: 0 30px 30px 30px;
 }
 
 header h1 {
-  font-size: 70px;
+  font-size: 52px;
   color: #5932c8;
 }
 
 header img {
-  width: 400px;
-  margin-bottom: 70px;
+  width: 300px;
 }
 
 main {
@@ -25,6 +27,8 @@ main {
   padding: 20px;
 
   border-radius: 10px;
+  width: 800px;
+  margin: 0 auto;
 }
 
 main h3 {
