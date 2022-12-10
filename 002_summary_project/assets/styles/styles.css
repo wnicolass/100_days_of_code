@@ -4,6 +4,7 @@ body {
   text-align: center;
   background-color: #f3e9ff;
   font-family: "Noto Sans", sans-serif;
+  margin: 0 20px;
 }
 
 header h1 {
@@ -28,6 +29,7 @@ main {
 
 main h3 {
   font-size: 30px;
+  margin: 20px 0;
 }
 
 ul {
@@ -39,6 +41,10 @@ li {
   margin-block: 10px;
 }
 
+p {
+  margin: 0;
+}
+
 p span {
   background-color: #feeead;
   color: #250054;
@@ -46,6 +52,8 @@ p span {
 
   padding: 4px;
   border-radius: 3px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .highlighted {
@@ -70,4 +78,5 @@ a {
 small {
   display: block;
   color: #7e708a;
+  margin-bottom: 20px;
 }
