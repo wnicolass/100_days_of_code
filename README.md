@@ -68,6 +68,7 @@
 ##
 ### Day 11: Deployment and Hosting
 - Difference between deployment and hosting
+- First deployment! Click [here](https://cozy-dasik-560e0f.netlify.app/) to see the website
 - Favicons :alien:
 - Relative vs Absolute paths
 - Git and Github
