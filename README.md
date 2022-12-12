@@ -61,3 +61,8 @@
 - Displays
 - Semantic HTML
 ##
+### Day 10: Final part of the first challenge
+- New HTML attributes for anchor tags
+- Introduced new HTML semantic elements
+- Ended first challenge
+##
