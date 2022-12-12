@@ -66,3 +66,10 @@
 - Introduced new HTML semantic elements
 - Ended first challenge
 ##
+### Day 11: Deployment and Hosting
+- Difference between deployment and hosting
+- Favicons :alien:
+- Relative vs Absolute paths
+- Git and Github
+- Version control
+##
