@@ -74,3 +74,8 @@
 - Git and Github
 - Version control
 ##
+### Day 12: Git Basics :cat:
+- Working directory
+- Repos (All tracked files and folders)
+- Commits, branches
+##
