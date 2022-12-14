@@ -81,3 +81,4 @@
 ##
 ### Day 12: More Git commands :cat:
 - Renaming branches
+- Removing files with Git rm
