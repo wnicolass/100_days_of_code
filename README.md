@@ -81,4 +81,9 @@
 ##
 ### Day 12: More Git commands :cat:
 - Renaming branches
-- Removing files with Git rm
+- Removing files with git rm
+- Merge conflicts
+- Undoing changes
+- Remote repo
+- Onwards to Github: What and Why?
+##
