@@ -79,3 +79,5 @@
 - Repos (All tracked files and folders)
 - Commits, branches
 ##
+### Day 12: More Git commands :cat:
+- Renaming branches
