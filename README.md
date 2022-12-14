@@ -79,7 +79,7 @@
 - Repos (All tracked files and folders)
 - Commits, branches
 ##
-### Day 12: More Git commands :cat:
+### Day 13: More Git commands :cat:
 - Renaming branches
 - Removing files with git rm
 - Merge conflicts
