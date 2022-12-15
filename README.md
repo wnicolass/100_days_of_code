@@ -66,7 +66,7 @@
 - Introduced new HTML semantic elements
 - Ended first challenge
 ##
-### Day 11: Deployment and Hosting
+### Day 11: Deployment and Hosting :tada:
 - Difference between deployment and hosting
 - First deployment! Click [here](https://cozy-dasik-560e0f.netlify.app/) to see the website
 - Favicons :alien:
