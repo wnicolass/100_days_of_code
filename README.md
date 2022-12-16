@@ -66,3 +66,31 @@
 - Introduced new HTML semantic elements
 - Ended first challenge
 ##
+### Day 11: Deployment and Hosting :tada:
+- Difference between deployment and hosting
+- First deployment! Click [here](https://cozy-dasik-560e0f.netlify.app/) to see the website
+- Favicons :alien:
+- Relative vs Absolute paths
+- Git and Github
+- Version control
+##
+### Day 12: Git Basics :cat:
+- Working directory
+- Repos (All tracked files and folders)
+- Commits, branches
+##
+### Day 13: More Git commands :cat:
+- Renaming branches
+- Removing files with git rm
+- Merge conflicts
+- Undoing changes
+- Remote repo
+- Onwards to Github: What and Why?
+##
+### Day 14: Github :cat:
+- Git clone
+- Collaboration and Organizations
+- Contributing
+- Forks
+- Pull requests
+##
