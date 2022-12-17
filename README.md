@@ -99,3 +99,9 @@
 - Start new project "Travel Goals" 🚧
 - Flexbox
 ##
+### Day 16: Normal Flow Layout and Positioning
+- Using images as backgrounds
+- Position: static and relative (Normal Flow)
+- Position: absolute and fixed (Removed from the Normal Flow)
+- Position: sticky (hybrid of relative and fixed positioning)
+##
