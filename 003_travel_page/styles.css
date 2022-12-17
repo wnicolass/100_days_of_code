@@ -48,3 +48,7 @@
   border-radius: 8px;
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
 }
+
+#hero-content a:hover {
+  background-color: rgb(230, 220, 0);
+}
