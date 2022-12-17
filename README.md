@@ -94,3 +94,8 @@
 - Forks
 - Pull requests
 ##
+### Day 15: Understanding HTML & CSS Layouts and Positioning
+- Introducing more semantic elements `nav`
+- Start new project "Travel Goals" 🚧
+- Flexbox
+##
