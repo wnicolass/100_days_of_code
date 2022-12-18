@@ -55,10 +55,18 @@
 
 #highlights {
   text-align: center;
+  text-transform: uppercase;
+}
+
+#highlights h2 {
+  font-size: 40px;
+  color: rgb(59, 65, 64);
+  margin-block: 24px;
 }
 
 #destinations {
   display: flex;
+  justify-content: center;
   width: 90%;
   margin: auto;
   margin-bottom: 40px;
@@ -75,4 +83,14 @@
   box-shadow: 2px 4px 8px rgb(68, 68, 67);
   border-radius: 10px;
   object-fit: cover;
+}
+
+.destination p {
+  font-size: 24px;
+  color: rgb(124, 123, 123);
+  margin-block: 20px;
+}
+
+.destination strong {
+  color: rgb(0, 160, 117);
 }
