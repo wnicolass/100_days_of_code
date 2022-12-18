@@ -66,9 +66,13 @@
 
 .destination {
   width: 100%;
+  margin-inline: 20px;
 }
 
 .destination img {
   height: 200px;
   width: 100%;
+  box-shadow: 2px 4px 8px rgb(68, 68, 67);
+  border-radius: 10px;
+  object-fit: cover;
 }
