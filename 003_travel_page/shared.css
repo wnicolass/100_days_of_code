@@ -13,9 +13,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
-  position: absolute;
+
   width: 100%;
+  padding: 15px 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
   box-sizing: border-box;
 }
 
