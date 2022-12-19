@@ -73,7 +73,47 @@ footer li {
   height: 80px;
 }
 
-footer i {
+footer li i {
   color: #fff;
   font-size: 80px;
+
+  transition: all 0.3s ease;
+}
+
+footer li:first-child i {
+  border-radius: 23px;
+  padding: 0px 5px 0 5px;
+}
+
+footer li:hover:first-child i {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+footer li:hover:last-child i {
+  color: #1da1f2;
 }
