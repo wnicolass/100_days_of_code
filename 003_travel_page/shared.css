@@ -55,3 +55,25 @@ header ul a:hover {
   color: rgb(77, 77, 77);
   background-color: rgb(255, 251, 0);
 }
+
+footer {
+  background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
+  padding: 25px;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer li {
+  width: 80px;
+  height: 80px;
+}
+
+footer i {
+  color: #fff;
+  font-size: 80px;
+}
