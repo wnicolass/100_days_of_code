@@ -57,6 +57,7 @@
   text-align: center;
   text-transform: uppercase;
   padding: 24px;
+  background: linear-gradient(45deg, rgb(227, 255, 253), rgb(200, 243, 240));
 }
 
 #highlights h2 {
