@@ -105,3 +105,9 @@
 - Position: absolute and fixed (Removed from the Normal Flow)
 - Position: sticky (hybrid of relative and fixed positioning)
 ##
+### Day 17: Understanding the `box-sizing` :package:
+- Working with `%` unit
+- Box-sizing: content-box & border-box
+- New inline element: `<strong>`
+- Resizing replaced elements with `object-fit`
+##
