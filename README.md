@@ -120,4 +120,4 @@
 - New CSS property: `overflow`
 - First Flexbox challenge :space_invader:
 - CSS Grid basics: `grid-template-columns`, `grid-column`
-- Tree-structural pseudo-classes: `:first-of-type`, `:nth-of-type`
+- Tree-structural pseudo-classes: `:first-of-type`, `:nth-of-type()`
