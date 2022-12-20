@@ -116,3 +116,8 @@
 - Colors with `linear-gradient();`
 - Travels Goals second page layout
 ##
+### Day 19: Flexbox challenge and Grid basics
+- New CSS property: `overflow`
+- First Flexbox challenge :space_invader:
+- CSS Grid basics: `grid-template-columns`, `grid-column`
+- Tree-structural pseudo-classes: `:first-of-type`, `:nth-of-type`
