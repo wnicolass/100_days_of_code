@@ -111,3 +111,8 @@
 - New inline element: `<strong>`
 - Resizing replaced elements with `object-fit`
 ##
+### Day 18: Continue to build the Travels Goals website
+- Margin collapsing in parent-child relationship
+- Colors with `linear-gradient();`
+- Travels Goals second page layout
+##
