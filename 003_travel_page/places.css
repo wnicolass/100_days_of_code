@@ -7,6 +7,16 @@ header {
   position: static;
 }
 
+header #page-logo a,
+header ul a {
+  color: rgb(183, 230, 235);
+}
+
+header ul a:hover {
+  background-color: rgb(183, 230, 235);
+  color: rgb(59, 59, 59);
+}
+
 main {
   margin-bottom: 20px;
 }
