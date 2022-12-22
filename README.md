@@ -129,3 +129,8 @@
 - Introducing Responsive Design :iphone:
 - New HTML Semantic Element: `<article>`
 ##
+### Day 21: Styling Webfood :hamburger: & Responsive Design Concepts
+- What is Responsive Design?
+- Comparing Units (Specifically for font-size)
+- Absolute and Relative Units
+##
