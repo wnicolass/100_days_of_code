@@ -52,3 +52,47 @@ main h1 {
   color: rgb(238, 164, 80);
   font-size: 48px;
 }
+
+#latest-products {
+  width: 80%;
+  margin: 50px auto;
+}
+
+#latest-products ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.food-item {
+  background-color: rgb(228, 206, 182);
+
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.food-item img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-item-content {
+  text-align: center;
+  padding: 16px;
+}
+
+.btn {
+  background-color: rgb(228, 157, 44);
+  color: #fff;
+
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: rgb(221, 134, 34);
+}
