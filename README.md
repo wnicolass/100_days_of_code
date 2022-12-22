@@ -121,3 +121,11 @@
 - First Flexbox challenge :space_invader:
 - CSS Grid basics: `grid-template-columns`, `grid-column`
 - Tree-structural pseudo-classes: `:first-of-type`, `:nth-of-type()`
+##
+### Day 20: End Travels Goals website & Start module about Responsive Design :tada:
+- Grid challenge :space_invader:
+- Using unicode into HTML
+- Travels Goals deployment :rocket: Click [here](https://golden-medovik-fc90d4.netlify.app) to see the website
+- Introducing Responsive Design :iphone:
+- New HTML Semantic Element: `<article>`
+##
