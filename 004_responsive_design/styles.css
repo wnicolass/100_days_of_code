@@ -46,3 +46,9 @@ a {
 #main-header nav ul a:hover {
   color: rgb(228, 163, 44);
 }
+
+main h1 {
+  text-align: center;
+  color: rgb(238, 164, 80);
+  font-size: 48px;
+}
