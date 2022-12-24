@@ -134,3 +134,9 @@
 - Comparing Units (Specifically for font-size)
 - Absolute and Relative Units
 ##
+### Day 22: Different size units & First approach at Media Queries
+- Difference between "%", "em" and "rem"
+- Desktop First :computer:
+- Mobile First :iphone:
+- What is a Media Query?
+##
