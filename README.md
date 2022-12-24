@@ -140,3 +140,9 @@
 - Mobile First :iphone:
 - What is a Media Query?
 ##
+### Day 23: Using Media Queries :iphone:
+- Media types: `all`, `screen`, `print` & Media features: `width`, `orientation`...
+- Media Query Syntax
+- First Media Queries challenge :space_invader:
+- Creating the Hamburger Icon & Side Drawer with new HTML Semantic Element `<aside>`
+##
