@@ -99,3 +99,9 @@ main h1 {
 .btn:hover {
   background-color: rgb(221, 134, 34);
 }
+
+@media screen and (max-width: 48rem) {
+  #latest-products ul {
+    grid-template-columns: 1fr;
+  }
+}
