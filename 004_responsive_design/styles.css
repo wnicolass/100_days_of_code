@@ -48,7 +48,7 @@ a {
 }
 
 .menu-btn {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
 
@@ -77,6 +77,15 @@ a {
 
 #side-drawer:target {
   display: block;
+}
+
+#side-drawer header {
+  height: 5rem;
+  padding-inline: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #side-drawer ul {
@@ -135,6 +144,10 @@ main h1 {
   padding: 1em;
 }
 
+.food-item-content h2 {
+  margin: 0 0 1rem 0;
+}
+
 .btn {
   background-color: rgb(228, 157, 44);
   color: #fff;
@@ -152,6 +165,10 @@ main h1 {
 @media screen and (max-width: 48rem) {
   #main-header nav {
     display: none;
+  }
+
+  .menu-btn {
+    display: flex;
   }
 
   main h1 {
