@@ -146,3 +146,9 @@
 - First Media Queries challenge :space_invader:
 - Creating the Hamburger Icon & Side Drawer with new HTML Semantic Element `<aside>`
 ##
+### Day 24: Finishing Webfood page :hamburger:
+- Target pseudo-class :dart:
+- Responsive Design module summary
+- Third deployment :rocket: click [here](https://sprightly-bavarois-511d0e.netlify.app) to see the website
+- Starting new module: Tips & Tricks to create a good website :tada:
+##
