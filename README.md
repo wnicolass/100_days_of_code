@@ -152,3 +152,9 @@
 - Third deployment :rocket: click [here](https://sprightly-bavarois-511d0e.netlify.app) to see the website
 - Starting new module: Tips & Tricks to create a good website :tada:
 ##
+### Day 25: CSS Custom Properties / Transform & Transition :sparkles:
+- How to create custom properties
+- Difference between `html`, `:root` and `*`
+- Adding transitions on the website :dizzy:
+- SVG (Scalable Vector Graphics)
+##
