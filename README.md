@@ -158,7 +158,7 @@
 - Adding transitions on the website :dizzy:
 - SVG (Scalable Vector Graphics)
 ##
-### Day 25: Understanding "Webforms"
+### Day 26: Understanding "Webforms"
 - What are web forms?
 - Key form elements: `<input type="...">`, `<select>`, `<textarea>`, `<button>`
 - Form element
