@@ -2,6 +2,10 @@ body {
   background-color: rgb(31, 30, 30);
 }
 
+body * {
+  font: normal 1rem "Roboto", sans-serif;
+}
+
 form {
   background-color: #fff;
 
@@ -11,12 +15,28 @@ form {
   margin: 3rem auto;
 }
 
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 input {
-  width: 100%;
   display: block;
 
-  margin-bottom: 1rem;
+  width: 100%;
+
   box-sizing: border-box;
+  padding: 0.25rem;
+  border: 1px solid rgb(184, 184, 184);
+  margin-bottom: 1rem;
+
+  color: rgb(61, 58, 58);
+}
+
+input:focus {
+  background-color: rgb(219, 190, 253);
+  color: rgb(32, 5, 63);
+  border-color: rgb(32, 5, 63);
 }
 
 button {
