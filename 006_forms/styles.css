@@ -30,7 +30,8 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input {
+input,
+textarea {
   display: block;
 
   width: 100%;
@@ -41,9 +42,12 @@ input {
   margin-bottom: 1rem;
 
   color: var(--grey-color-400);
+
+  resize: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   background-color: var(--primary-color-100);
   color: var(--primary-color-700);
   border-color: var(--primary-color-700);
