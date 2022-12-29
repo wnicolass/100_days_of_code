@@ -27,15 +27,21 @@
           <h2>Your personal details</h2>
           <div class="essential-data">
             <label for="username">Your name</label>
-            <input type="text" name="user-name" id="username" />
+            <input type="text" name="user-name" id="username" required />
           </div>
           <div class="essential-data">
             <label for="useremail">Your email address</label>
-            <input type="email" name="user-email" id="useremail" />
+            <input type="email" name="user-email" id="useremail" required />
           </div>
           <div class="essential-data">
             <label for="userpassword">Enter password</label>
-            <input type="password" name="user-password" id="userpassword" />
+            <input
+              type="password"
+              name="user-password"
+              id="userpassword"
+              required
+              minlength="3"
+            />
           </div>
         </section>
 
@@ -43,11 +49,26 @@
           <h2>More details</h2>
           <div class="personal-data">
             <label for="userage">Your age</label>
-            <input type="number" step="1" id="userage" name="user-age" />
+            <input
+              type="number"
+              step="1"
+              id="userage"
+              name="user-age"
+              required
+              min="18"
+              max="100"
+            />
           </div>
           <div class="personal-data">
             <label for="birthdate">Birthdate</label>
-            <input type="date" id="birthdate" name="birth-date" />
+            <input
+              type="date"
+              id="birthdate"
+              name="birth-date"
+              required
+              min="1900-01-01"
+              max="2023-01-01"
+            />
           </div>
           <div class="personal-data">
             <label for="favorite-color">Your favorite color</label>
@@ -72,15 +93,28 @@
               name="verify"
               id="verify-text-message"
               value="text-message"
+              required
             />
             <label for="verify-text-message">Via text message (SMS)</label>
           </div>
           <div class="form-control-inline">
-            <input type="radio" name="verify" id="verify-phone" value="phone" />
+            <input
+              type="radio"
+              name="verify"
+              id="verify-phone"
+              value="phone"
+              required
+            />
             <label for="verify-phone">Via phone call</label>
           </div>
           <div class="form-control-inline">
-            <input type="radio" name="verify" id="verify-email" value="email" />
+            <input
+              type="radio"
+              name="verify"
+              id="verify-email"
+              value="email"
+              required
+            />
             <label for="verify-email">Via an email</label>
           </div>
         </section>
