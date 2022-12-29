@@ -12,8 +12,13 @@ body {
   background-color: var(--grey-color-700);
 }
 
-body * {
+body *:not(h1, h2) {
   font: normal 1rem "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
 }
 
 form {
