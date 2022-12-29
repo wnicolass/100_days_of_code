@@ -170,3 +170,8 @@
 - Styling inputs :lipstick:
 - How data is sent to the server with inputs
 ##
+### Day 28: More form input types and attributes
+- Checkbox, dropdown and textarea
+- Different button types :computer_mouse:
+- Default validation
+##
