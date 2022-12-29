@@ -83,3 +83,8 @@ button:hover {
   width: auto;
   margin-right: 0.5rem;
 }
+
+#btn-container {
+  display: flex;
+  justify-content: space-between;
+}
