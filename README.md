@@ -164,3 +164,9 @@
 - Form element
 - Action & Method attributes
 ##
+### Day 27: Working with different input types :speech_balloon:
+- Label element and for attribute
+- Input type: text, number, email, password, etc.
+- Styling inputs :lipstick:
+- How data is sent to the server with inputs
+##
