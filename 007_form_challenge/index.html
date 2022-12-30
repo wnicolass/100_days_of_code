@@ -39,19 +39,27 @@
           />
           <label for="phone">Your Phone Number</label>
           <input
-            type="number"
+            type="tel"
             name="phone"
             id="phone"
             required
             placeholder="999-999-999"
+            minlength="5"
           />
         </section>
 
         <section id="extra-info">
           <label for="message">Your Message</label>
-          <textarea name="message" id="message" rows="10" required></textarea>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            required
+            minlength="10"
+            maxlength="250"
+          ></textarea>
           <label for="found">How did you find us?</label>
-          <select name="found-us" id="found">
+          <select name="channel" id="channel">
             <option value="web">Web Search</option>
             <option value="mouth">Word of Mouth</option>
             <option value="other">Other</option>
@@ -86,7 +94,7 @@
           </div>
         </section>
 
-        <section id="terms">
+        <section id="terms-section">
           <div class="form-control-input">
             <input type="checkbox" id="terms" name="terms" />
             <label for="terms">Accept Terms</label>
