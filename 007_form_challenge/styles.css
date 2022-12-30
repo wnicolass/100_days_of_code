@@ -1,5 +1,6 @@
 body {
   background-color: #ecf9fd;
+  margin: 0;
 }
 
 body * {
@@ -91,6 +92,6 @@ button:hover {
 }
 
 footer {
-  margin: 2rem auto;
+  padding: 2rem 0;
   text-align: center;
 }
