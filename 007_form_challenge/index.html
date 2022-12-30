@@ -12,13 +12,66 @@
       <h1>Contact Us</h1>
     </header>
     <main>
-      <section id="personal-info"></section>
+      <form action="/" method="GET">
+        <section id="personal-info">
+          <h2>How can we help you?</h2>
+          <label for="username">Your Name</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            required
+            placeholder="Enter your name..."
+          />
+          <label for="email">Your E-mail Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter your best e-mail..."
+          />
+          <label for="phone">Your Phone Number</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            required
+            placeholder="999-999-999"
+          />
+        </section>
 
-      <section id="extra-info"></section>
+        <section id="extra-info">
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="10"></textarea>
+          <label for="found">How did you find us?</label>
+          <select name="found-us" id="found">
+            <option value="web">Web Search</option>
+            <option value="mouth">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
 
-      <section id="contact"></section>
+        <section id="contact">
+          <h2>How should we reply?</h2>
+          <input type="radio" name="reply" value="call" id="call" />
+          <label for="call">Call me</label>
+          <input type="radio" name="reply" value="email" id="email" />
+          <label for="email">Send me an email</label>
+          <input type="radio" name="reply" value="no-reply" id="no-reply" />
+          <label for="no-reply">Don't reply</label>
+        </section>
 
-      <section id="btn-container"></section>
+        <section id="terms">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms">Accept Terms</label>
+        </section>
+
+        <section id="btn-container">
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
     </main>
     <footer>
       <small>Made with love by Nic ❤️</small>
