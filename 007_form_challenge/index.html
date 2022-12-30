@@ -49,7 +49,7 @@
 
         <section id="extra-info">
           <label for="message">Your Message</label>
-          <textarea name="message" id="message" rows="10"></textarea>
+          <textarea name="message" id="message" rows="10" required></textarea>
           <label for="found">How did you find us?</label>
           <select name="found-us" id="found">
             <option value="web">Web Search</option>
@@ -61,15 +61,27 @@
         <section id="contact">
           <h2>How should we reply?</h2>
           <div class="form-control-input">
-            <input type="radio" name="reply" value="call" id="call" />
+            <input type="radio" name="reply" value="call" id="call" required />
             <label for="call">Call me</label>
           </div>
           <div class="form-control-input">
-            <input type="radio" name="reply" value="email" id="e-mail" />
+            <input
+              type="radio"
+              name="reply"
+              value="email"
+              id="e-mail"
+              required
+            />
             <label for="e-mail">Send me an email</label>
           </div>
           <div class="form-control-input">
-            <input type="radio" name="reply" value="no-reply" id="no-reply" />
+            <input
+              type="radio"
+              name="reply"
+              value="no-reply"
+              id="no-reply"
+              required
+            />
             <label for="no-reply">Don't reply</label>
           </div>
         </section>
