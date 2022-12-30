@@ -89,3 +89,8 @@ button:hover {
   background-color: #2f3a56;
   color: #fff;
 }
+
+footer {
+  margin: 1rem auto;
+  text-align: center;
+}
