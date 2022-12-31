@@ -175,3 +175,9 @@
 - Different button types :computer_mouse:
 - Default validation
 ##
+### Day 29: Form challenge & Start JavaScript Module :tada:
+- Form challenge :space_invader: 
+- Form challenge deployment! click [here](https://fanciful-pudding-df7c3c.netlify.app/) to see the website :rocket:
+- What is Javascript?
+- What are variables?
+##
