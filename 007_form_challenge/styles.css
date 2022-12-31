@@ -1,5 +1,16 @@
+:root {
+  --light-blue-100: #ecf9fd;
+  --light-blue-300: #e8f0fd;
+  --light-blue-600: #d4ddf3;
+
+  --blue-400: #6991e1;
+  --blue-700: #2f3a56;
+
+  --radius-size: 4px;
+}
+
 body {
-  background-color: #ecf9fd;
+  background-color: var(--light-blue-100);
   margin: 0;
 }
 
@@ -16,11 +27,11 @@ h2 {
 }
 
 main {
-  background-color: #e8f0fd;
+  background-color: var(--light-blue-300);
 
   width: 40rem;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: var(--radius-size);
   margin: 0 auto;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
@@ -50,24 +61,24 @@ select {
 
   padding: 0.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-size);
   margin: 0.5rem 0;
   resize: none;
 }
 
 input:focus,
 textarea:focus {
-  background-color: #d4ddf3;
-  outline-color: #6991e1;
+  background-color: var(--light-blue-600);
+  outline-color: var(--blue-400);
 }
 
 button {
   font-size: 1rem;
   padding: 0.4rem 1.3rem;
 
-  border-radius: 4px;
+  border-radius: var(--radius-size);
 
-  border: 1px solid #2f3a56;
+  border: 1px solid var(--blue-700);
   cursor: pointer;
 }
 
@@ -97,7 +108,7 @@ button:hover {
 }
 
 #btn-container button:last-child {
-  background-color: #2f3a56;
+  background-color: var(--blue-700);
   color: #fff;
 }
 
