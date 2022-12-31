@@ -181,3 +181,9 @@
 - What is Javascript?
 - What are variables?
 ##
+### Day 30: Basic JavaScript concepts
+- Variables
+- Arrays: `['this', 'is', 'an', 'array']`
+- Objects: `{ this: 'is', an: 'object' }`
+- Using the `alert()` function
+##
