@@ -187,3 +187,9 @@
 - Objects: `{ this: 'is', an: 'object' }`
 - Using the `alert()` function
 ##
+### Day 31: Basic JavaScript concepts pt.2
+- Accessing obejcts properties
+- Introducing functions :tada:
+- Returning values in functions
+- Shadowing
+##
