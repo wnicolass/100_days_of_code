@@ -32,3 +32,5 @@ let person = {
 };
 
 person.greet();
+
+console.log(person);
