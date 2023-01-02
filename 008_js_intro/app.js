@@ -1,14 +1,25 @@
-let age = 23;
-let userName = "Nic";
-let hobbies = ["Sports", "Cooking", "Reading"];
-let job = {
-  title: "Developer",
-  place: "New York",
-  salary: 50000,
+let courseName = "Web Development Bootcamp";
+let price = 9.99;
+let objectives = [
+  "Get hired",
+  "Learn more about JS",
+  "Build an e-commerce project",
+];
+
+let onlineCourse = {
+  name: courseName,
+  price: price,
+  objectives: objectives,
 };
 
-function calculateAdultYears(years) {
-  return years - 18;
+alert(onlineCourse.name);
+alert(onlineCourse.price);
+alert(onlineCourse.objectives);
+alert(onlineCourse.objectives[1]);
+
+function showGoal(listOfGoals, goal) {
+  return listOfGoals[goal];
 }
 
-alert(calculateAdultYears(age));
+let myGoal = showGoal(objectives, 2);
+alert(myGoal);
