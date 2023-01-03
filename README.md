@@ -193,3 +193,8 @@
 - Returning values in functions
 - Shadowing
 ##
+### Day 32: Math operations and strings :abacus:
+- Objects & Methods
+- Basic math operations
+- String operations & methods
+##
