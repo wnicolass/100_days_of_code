@@ -198,3 +198,9 @@
 - Basic math operations
 - String operations & methods
 ##
+### Day 33: Working with the DOM :tada:
+- Data representation of the parsed HTML Code
+- Nodes
+- Defer attribute
+- The DOM Tree of Nested Objects :evergreen_tree:
+##
