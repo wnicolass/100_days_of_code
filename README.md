@@ -204,3 +204,8 @@
 - Defer attribute
 - The DOM Tree of Nested Objects :evergreen_tree:
 ##
+### Day 34: Drilling into the DOM
+- Querying elements
+- First DOM challenge :space_invader:
+- Creating elements via JS
+##
