@@ -9,3 +9,9 @@ anchorElement.href = "https://google.com";
 // anchorElement = document.querySelector("#external-link");
 anchorElement = document.querySelector("p a");
 anchorElement.href = "https://academind.com";
+
+let newAnchorTag = document.createElement("a");
+newAnchorTag.href = "https://google.com";
+newAnchorTag.textContent = " This leads to Google!";
+let firstParagraph = document.querySelector("h1 + p");
+firstParagraph.appendChild(newAnchorTag);
