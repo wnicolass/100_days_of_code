@@ -10,15 +10,21 @@ anchorElement.href = "https://google.com";
 anchorElement = document.querySelector("p a");
 anchorElement.href = "https://academind.com";
 
-//creating element
+//creating elements
 let newAnchorTag = document.createElement("a");
 newAnchorTag.href = "https://google.com";
 newAnchorTag.textContent = " This leads to Google!";
-let firstParagraph = document.querySelector("h1 + p");
+
+let firstParagraph = document.querySelector("#new-paragraph");
 firstParagraph.appendChild(newAnchorTag);
 
-//removing element
+//removing elements
 let firstH1Element = document.getElementById("title");
+firstH1Element.remove();
+// firstH1Element.parentElement.removeChild(firstH1Element); //older browsers
 
-// firstH1Element.remove();
-firstH1Element.parentElement.removeChild(firstH1Element); //older browsers
+//moving elements
+firstParagraph.parentElement.appendChild(firstParagraph);
+
+//innerHTML
+firstParagraph.innerHTML = "Hi! This is <strong>important!</strong>";
