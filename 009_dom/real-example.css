@@ -1,0 +1,61 @@
+body {
+  background-color: #1f201b;
+}
+
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: #f3f3c8;
+
+  margin: 3rem auto;
+  border-radius: 8px;
+  padding: 1rem;
+
+  width: min(70%, 50rem);
+}
+
+form label {
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  display: block;
+}
+
+form input {
+  font-size: 1rem;
+
+  width: 60%;
+
+  margin-block: 0.5rem;
+  padding: 0.3rem;
+}
+
+form input:focus {
+  background-color: #fbf5c2;
+  outline-color: #1f201b;
+}
+
+form input:focus.warning {
+  background-color: #eebc8c;
+}
+
+form span {
+  color: #676546;
+
+  margin-left: 0.5rem;
+}
+
+form span.warning {
+  color: #eebc8c;
+}
+
+form button {
+  font-size: 1rem;
+  background-color: #c7b136;
+
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
