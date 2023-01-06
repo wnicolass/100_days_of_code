@@ -1,10 +1,10 @@
-let inputEl = document.getElementById("product");
-let inputLength = document.getElementById("length");
-const totalLength = 60;
+const inputEl = document.getElementById("product");
+const inputLength = document.getElementById("length");
+const maxInputLength = inputEl.maxLength;
 
 const computeInputLength = (e) => {
   let inputValueLength = e.target.value.length;
-  let remainingCharacters = totalLength - inputValueLength;
+  let remainingCharacters = maxInputLength - inputValueLength;
   inputLength.textContent = remainingCharacters;
 
   if (remainingCharacters <= 10) {
