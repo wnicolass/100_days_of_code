@@ -209,3 +209,9 @@
 - First DOM challenge :space_invader:
 - Creating elements via JS
 ##
+### Day 35: textContent vs innerHTML & Events :loudspeaker:
+- Working with innerHTML
+- Introducing events
+- First 'click' event :computer_mouse:
+- More events
+##
