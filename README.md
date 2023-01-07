@@ -215,3 +215,8 @@
 - First 'click' event :computer_mouse:
 - More events
 ##
+### Day 36: Constants & Second DOM challenge :space_invader:
+- What is a constant variable?
+- Changing elements style with JavaScript
+- Managing CSS classes with JavaScript
+##
