@@ -225,3 +225,10 @@
 - Boolean values
 - Comparison & Logical operators
 ##
+### Day 38: Else-If & Loops :repeat:
+- Flag variables :triangular_flag_on_post:
+- Traditional For loop
+- For-of
+- For-in
+- While
+##
