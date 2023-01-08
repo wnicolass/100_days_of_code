@@ -220,3 +220,8 @@
 - Changing elements style with JavaScript
 - Managing CSS classes with JavaScript
 ##
+### Day 37: Third DOM challenge & Control Structures :space_invader:
+- If statements
+- Boolean values
+- Comparison & Logical operators
+##
