@@ -65,10 +65,10 @@ const rollDice = () => {
   }
 
   const outputTotalRolls = document.getElementById("output-total-rolls");
-  const outputTargetNumber = document.getElementById("output-targer-numbber");
+  const outputTargetNumber = document.getElementById("output-target-number");
 
-  outputTargetNumber.textContent = userNumber;
-  outputTotalRolls.textContent = totalRolls;
+  outputTargetNumber.textContent = "" + userNumber;
+  outputTotalRolls.textContent = "" + totalRolls;
 };
 
 statisticsBtn.addEventListener("click", rollDice);
