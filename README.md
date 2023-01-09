@@ -232,3 +232,9 @@
 - For-in
 - While
 ##
+### Day 39: All loops exercise :repeat:
+- Traditional For loop
+- For-of
+- For-in
+- While
+##
