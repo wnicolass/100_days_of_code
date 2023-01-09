@@ -1,5 +1,6 @@
 const computeBtn = document.querySelector("#calculator button");
 const highlightBtn = document.querySelector("#highlight-links button");
+const userDataBtn = document.querySelector("#user-data button");
 
 const calculateSumUpToUserNumber = () => {
   const userNumber = document.getElementById("user-number");
@@ -22,5 +23,22 @@ const highlightLinks = () => {
   }
 };
 
+const displayUserData = () => {
+  const output = document.getElementById("output-user-data");
+  output.textContent = "";
+  const randomUserData = {
+    firstName: "Nic",
+    lastName: "Lim",
+    age: 24,
+  };
+
+  for (data in randomUserData) {
+    const li = document.createElement("li");
+    li.textContent = `${data}: ${randomUserData[data]}`.toUpperCase();
+    output.appendChild(li);
+  }
+};
+
+userDataBtn.addEventListener("click", displayUserData);
 highlightBtn.addEventListener("click", highlightLinks);
 computeBtn.addEventListener("click", calculateSumUpToUserNumber);
