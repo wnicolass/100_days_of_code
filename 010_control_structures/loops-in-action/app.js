@@ -1,4 +1,5 @@
 const computeBtn = document.querySelector("#calculator button");
+const highlightBtn = document.querySelector("#highlight-links button");
 
 const calculateSumUpToUserNumber = () => {
   const userNumber = document.getElementById("user-number");
@@ -13,4 +14,13 @@ const calculateSumUpToUserNumber = () => {
   computeBtn.nextElementSibling.textContent = total;
 };
 
+const highlightLinks = () => {
+  const anchorElements = document.querySelectorAll("#highlight-links p a");
+
+  for (let anchor of anchorElements) {
+    anchor.classList.toggle("highlight");
+  }
+};
+
+highlightBtn.addEventListener("click", highlightLinks);
 computeBtn.addEventListener("click", calculateSumUpToUserNumber);
