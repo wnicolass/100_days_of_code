@@ -11,9 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Play Tic, Tac, Toe</h1>
       <p>Build with HTML, CSS, Javascript and - of course - a keyboard</p>
     </header>
@@ -26,8 +27,8 @@
             <input type="text" name="playername" id="playername" />
           </div>
           <div>
-            <button type="button">Cancel</button>
-            <button type="submit">Confirm</button>
+            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="submit" class="btn">Confirm</button>
           </div>
         </form>
       </aside>
@@ -38,18 +39,18 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p>X</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
             <article>
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p>O</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
           <li></li>
         </ol>
-        <button>Start New Game</button>
+        <button class="btn">Start New Game</button>
       </section>
       <section id="active-game">
         <article>
