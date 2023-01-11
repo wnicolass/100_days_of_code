@@ -1,3 +1,28 @@
+#config-overlay {
+  text-align: center;
+}
+
 #config-overlay h2 {
+  margin: 0.5rem 0;
+}
+
+.form-control {
   margin: 0.5rem;
+}
+
+.form-control label {
+  font-weight: 700;
+
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control input {
+  border: 1px solid rgb(204, 204, 204);
+  padding: 0.35rem;
+  width: 15rem;
+}
+
+.form-control input:focus {
+  outline-color: rgb(140, 0, 255);
 }
