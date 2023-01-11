@@ -1,0 +1,13 @@
+:root {
+  --primary-purple-100: rgb(243, 227, 244);
+  --primary-purple-200: rgb(215, 187, 247);
+  --primary-purple-400: rgb(140, 0, 255);
+  --primary-purple-500: rgb(112, 13, 204);
+  --primary-purple-600: rgb(94, 4, 168);
+  --primary-purple-700: rgb(79, 10, 190);
+  --primary-purple-800: rgb(50, 5, 85);
+  --primary-purple-900: rgb(47, 4, 82);
+
+  --width: min(90%, 40rem);
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

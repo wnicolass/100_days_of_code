@@ -9,7 +9,7 @@ body * {
 }
 
 #main-header {
-  background-color: rgb(140, 0, 255);
+  background-color: var(--primary-purple-400);
   color: #fff;
   text-align: center;
 
@@ -18,11 +18,11 @@ body * {
 
 .btn {
   font-size: 1rem;
-  background-color: rgb(140, 0, 255);
+  background-color: var(--primary-purple-400);
   color: #fff;
 
   padding: 0.5rem 1.5rem;
-  border: 1px solid rgb(140, 0, 255);
+  border: 1px solid var(--primary-purple-400);
   border-radius: 4px;
 
   cursor: pointer;
@@ -31,12 +31,12 @@ body * {
 .btn-alt {
   background-color: transparent;
   border-color: transparent;
-  color: rgb(140, 0, 255);
+  color: var(--primary-purple-400);
 }
 
 .btn:hover {
-  background-color: rgb(79, 10, 190);
-  border-color: rgb(79, 10, 190);
+  background-color: var(--primary-purple-700);
+  border-color: var(--primary-purple-700);
 }
 
 .btn-alt:hover {

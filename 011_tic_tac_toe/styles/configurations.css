@@ -24,11 +24,11 @@
 }
 
 .form-control input:focus {
-  outline-color: rgb(140, 0, 255);
+  outline-color: var(--primary-purple-400);
 }
 
 #game-configuration {
-  width: min(90%, 40rem);
+  width: var(--width);
   margin: 3rem auto;
   text-align: center;
 }
@@ -42,7 +42,7 @@
 }
 
 #game-configuration ol li {
-  background-color: rgb(243, 227, 244);
+  background-color: var(--primary-purple-100);
 
   margin: 1rem;
   border-radius: 4px;
@@ -60,7 +60,7 @@
 
 #game-configuration ol li h3 {
   font-size: 1.5rem;
-  color: rgb(94, 4, 168);
+  color: var(--primary-purple-600);
 
   margin: 0.5rem 0;
 }
@@ -68,7 +68,7 @@
 .player-symbol {
   font-size: 2rem;
   font-weight: 700;
-  color: rgb(47, 4, 82);
+  color: var(--primary-purple-900);
 
   margin: 0.5rem 0;
 }

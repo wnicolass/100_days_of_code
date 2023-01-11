@@ -6,13 +6,13 @@
 }
 
 #game-over {
-  background-color: rgb(50, 5, 85);
+  background-color: var(--primary-purple-800);
   color: #fff;
 
   margin: auto;
   border-radius: 4px;
   padding: 1rem 2rem;
-  width: min(90%, 40rem);
+  width: var(--width);
 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
@@ -26,7 +26,7 @@
 
 #active-player-name {
   font-weight: 700;
-  color: rgb(50, 5, 85);
+  color: var(--primary-purple-800);
 }
 
 #game-board {
@@ -43,7 +43,7 @@
 }
 
 #game-board li {
-  background-color: rgb(215, 187, 247);
+  background-color: var(--primary-purple-200);
   font-size: 2.5rem;
   font-weight: 700;
 
@@ -55,11 +55,11 @@
 }
 
 #game-board li:hover {
-  background-color: rgb(112, 13, 204);
+  background-color: var(--primary-purple-500);
 }
 
 #game-board li.disabled {
-  background-color: rgb(112, 13, 204);
+  background-color: var(--primary-purple-500);
   color: #fff;
   cursor: default;
 }
