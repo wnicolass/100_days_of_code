@@ -238,3 +238,7 @@
 - For-in
 - While
 ##
+### Day 40: Tic-Tac-Toe Project :space_invader:
+- Base game structure
+- Finished general element styles :art:
+##
