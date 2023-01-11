@@ -26,3 +26,49 @@
 .form-control input:focus {
   outline-color: rgb(140, 0, 255);
 }
+
+#game-configuration {
+  width: min(90%, 40rem);
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#game-configuration ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+#game-configuration ol li {
+  background-color: rgb(243, 227, 244);
+
+  margin: 1rem;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 50%;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#game-configuration ol li h2 {
+  font-size: 1rem;
+
+  margin: 0.5rem 0;
+}
+
+#game-configuration ol li h3 {
+  font-size: 1.5rem;
+  color: rgb(94, 4, 168);
+
+  margin: 0.5rem 0;
+}
+
+.player-symbol {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(47, 4, 82);
+
+  margin: 0.5rem 0;
+}
