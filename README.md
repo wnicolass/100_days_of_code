@@ -242,3 +242,7 @@
 - Base game structure
 - Finished general element styles :art:
 ##
+### Day 41: Tic-Tac-Toe Project Pt.2 :space_invader:
+- Finished all game styling
+- Started working on player settings with JavaScript
+##
