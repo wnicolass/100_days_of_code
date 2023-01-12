@@ -246,3 +246,8 @@
 - Finished all game styling
 - Started working on player settings with JavaScript
 ##
+### Day 42: Tic-Tac-Toe Project Pt.3 :space_invader:
+- Continue working on player settings
+- Create new CSS rule for error messages
+- Add more CSS custom properties
+##
