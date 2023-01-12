@@ -8,6 +8,9 @@
   --primary-purple-800: rgb(50, 5, 85);
   --primary-purple-900: rgb(47, 4, 82);
 
+  --error-color-400: rgb(136, 2, 2);
+  --error-color-100: rgb(259, 219, 219);
+
   --width: min(90%, 40rem);
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

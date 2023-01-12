@@ -23,6 +23,16 @@
   width: 15rem;
 }
 
+.error label {
+  color: var(--error-color-400);
+}
+
+.error input {
+  border-color: var(--error-color-400);
+  color: var(--error-color-400);
+  background-color: var(--error-color-100);
+}
+
 .form-control input:focus {
   outline-color: var(--primary-purple-400);
 }
