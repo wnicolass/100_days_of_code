@@ -1,18 +1,26 @@
 export const backdropElement = document.getElementById("backdrop");
-const playerConfigOverlay = document.getElementById("config-overlay");
-const errorsOutputElement = document.getElementById("config-errors");
 export const formElement = document.querySelector("form");
 
-export const openPlayerConfig = () => {
+const playerConfigOverlay = document.getElementById("config-overlay");
+const errorsOutputElement = document.getElementById("config-errors");
+let editedPlayer = 0;
+const players = [
+  { name: "", symbol: "X" },
+  { name: "", symbol: "O" },
+];
+
+export const openPlayerConfig = (event) => {
+  editedPlayer = +event.target.dataset.playerid;
   playerConfigOverlay.style.display = "block";
   backdropElement.style.display = "block";
-  formElement.firstElementChild.classList.remove("error");
-  errorsOutputElement.textContent = "";
 };
 
 export const closePlayerConfig = () => {
   playerConfigOverlay.style.display = "none";
   backdropElement.style.display = "none";
+  formElement.firstElementChild.classList.remove("error");
+  errorsOutputElement.textContent = "";
+  formElement.firstElementChild.lastElementChild.value = "";
 };
 
 export const savePlayerConfig = (event) => {
@@ -25,4 +33,13 @@ export const savePlayerConfig = (event) => {
     errorsOutputElement.textContent = "Please enter a valid name!";
     return;
   }
+
+  const updatedPlayerData = document.getElementById(
+    `player-${editedPlayer}-data`
+  );
+
+  updatedPlayerData.children[1].textContent = enteredPlayerName;
+
+  players[editedPlayer - 1].name = enteredPlayerName;
+  closePlayerConfig();
 };
