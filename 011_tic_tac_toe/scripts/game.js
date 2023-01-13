@@ -2,6 +2,11 @@ import { players } from "./config.js";
 
 const gameAreaElement = document.getElementById("active-game");
 const activePlayerNameElement = document.getElementById("active-player-name");
+const gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
 let activePlayer = 0;
 
 export const startNewGame = () => {
@@ -19,7 +24,19 @@ const switchPlayer = () => {
 };
 
 export const selectGameField = (event) => {
-  event.target.textContent = players[activePlayer].symbol;
-  event.target.classList.add("disabled");
+  const selectedField = event.target;
+  if (selectedField.classList.contains("disabled")) {
+    alert("Please select an empty field!");
+    return;
+  }
+  selectedField.textContent = players[activePlayer].symbol;
+  selectedField.classList.add("disabled");
+
+  const selectedColumn = +selectedField.dataset.col;
+  const selectedRow = +selectedField.dataset.row;
+
+  gameData[selectedRow][selectedColumn] = activePlayer + 1;
+  console.log(gameData);
+
   switchPlayer();
 };
