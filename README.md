@@ -251,3 +251,8 @@
 - Create new CSS rule for error messages
 - Add more CSS custom properties
 ##
+### Day 43: Tic-Tac-Toe Project Pt.4 :space_invader:
+- Store players' data
+- Start game
+- Store players' selected fields
+##
