@@ -1,13 +1,13 @@
 export const backdropElement = document.getElementById("backdrop");
 export const formElement = document.querySelector("form");
+export const players = [
+  { name: "", symbol: "X" },
+  { name: "", symbol: "O" },
+];
 
 const playerConfigOverlay = document.getElementById("config-overlay");
 const errorsOutputElement = document.getElementById("config-errors");
 let editedPlayer = 0;
-const players = [
-  { name: "", symbol: "X" },
-  { name: "", symbol: "O" },
-];
 
 export const openPlayerConfig = (event) => {
   editedPlayer = +event.target.dataset.playerid;
