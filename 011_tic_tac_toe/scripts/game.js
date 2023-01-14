@@ -2,6 +2,7 @@ import { players } from "./config.js";
 
 const gameAreaElement = document.getElementById("active-game");
 const activePlayerNameElement = document.getElementById("active-player-name");
+const gameOverElement = document.getElementById("game-over");
 const gameData = [
   [0, 0, 0],
   [0, 0, 0],
@@ -10,12 +11,37 @@ const gameData = [
 let activePlayer = 0;
 let currentRound = 1;
 const totalRounds = 9;
+let isGameOver = false;
+
+const resetGameStatus = () => {
+  isGameOver = false;
+  activePlayer = 0;
+  currentRound = 1;
+  gameOverElement.firstElementChild.innerHTML = `You won, <span id="winner-name">PLAYERNAME</span>!`;
+  gameOverElement.style.display = "none";
+
+  let gameBoardIndex = 0;
+  for (let i = 0; i < gameData.length; i++) {
+    for (let j = 0; j < gameData.length; j++) {
+      gameData[i][j] = 0;
+      let gameBoardItem =
+        gameAreaElement.lastElementChild.children[gameBoardIndex];
+
+      gameBoardItem.textContent = "";
+      gameBoardItem.classList.remove("disabled");
+      gameBoardIndex++;
+    }
+  }
+};
 
 export const startNewGame = () => {
   if (!players[0].name || !players[1].name) {
     alert("Please set custom player names.");
     return;
   }
+
+  resetGameStatus();
+
   activePlayerNameElement.textContent = players[activePlayer].name;
   gameAreaElement.style.display = "block";
 };
@@ -74,12 +100,24 @@ const checkForGameOver = () => {
   return 0;
 };
 
+const endGame = (winnerId) => {
+  isGameOver = true;
+  gameOverElement.style.display = "block";
+
+  if (winnerId > 0) {
+    const winnerElement = document.getElementById("winner-name");
+    winnerElement.textContent = players[winnerId - 1].name;
+  } else {
+    gameOverElement.firstElementChild.textContent = "It's a draw!";
+  }
+};
+
 export const selectGameField = (event) => {
   const selectedField = event.target;
-  if (selectedField.classList.contains("disabled")) {
-    alert("Please select an empty field!");
+  if (selectedField.classList.contains("disabled") || isGameOver) {
     return;
   }
+
   selectedField.textContent = players[activePlayer].symbol;
   selectedField.classList.add("disabled");
 
@@ -89,7 +127,8 @@ export const selectGameField = (event) => {
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
   const winnerId = checkForGameOver();
-  console.log(winnerId);
+
+  winnerId !== 0 ? endGame(winnerId) : false;
 
   currentRound++;
   switchPlayer();
