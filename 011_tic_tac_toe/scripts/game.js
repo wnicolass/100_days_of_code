@@ -15,7 +15,7 @@ let isGameOver = false;
 
 const resetGameStatus = () => {
   isGameOver = false;
-  activePlayer = 0;
+  activePlayer = Math.floor(Math.random() * 2) + 1 - 1;
   currentRound = 1;
   gameOverElement.firstElementChild.innerHTML = `You won, <span id="winner-name">PLAYERNAME</span>!`;
   gameOverElement.style.display = "none";
