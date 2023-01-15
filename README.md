@@ -256,3 +256,9 @@
 - Start game
 - Store players' selected fields
 ##
+### Day 44: Tic-Tac-Toe Project Pt. Final :space_invader:
+- Create game logic
+- End game with a winner or draw
+- Reset all game status
+- Game deployment, click [here](https://cosmic-belekoy-3cc733.netlify.app/) to see the game! :rocket:
+##
