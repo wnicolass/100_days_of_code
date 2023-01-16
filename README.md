@@ -262,3 +262,8 @@
 - Reset all game status
 - Game deployment, click [here](https://cosmic-belekoy-3cc733.netlify.app/) to see the game! :rocket:
 ##
+### Day 45: Third-Party Packages :tada:
+- What are third-party packages?
+- Using Bootstrap
+- Third-Party x Custom Code
+##
