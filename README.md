@@ -272,3 +272,8 @@
 - Frontend, Backend and Fullstack
 - How do we write server-side code?
 ##
+### Day 47: Introducing Node.js
+- What is Node.js?
+- Creating a custom server with Node :desktop_computer:
+- Handling Requests & Creating custom Responses
+##
