@@ -267,3 +267,8 @@
 - Using Bootstrap
 - Third-Party x Custom Code
 ##
+### Day 46: Onwards to Backend :computer:
+- Static vs Dynamic websites
+- Frontend, Backend and Fullstack
+- How do we write server-side code?
+##
