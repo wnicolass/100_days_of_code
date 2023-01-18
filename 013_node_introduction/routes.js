@@ -1,4 +1,6 @@
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
 const routes = express.Router();
 
 routes.get("/currenttime", (req, res) =>
@@ -13,7 +15,12 @@ routes.get("/", (req, res) => {
 
 routes.post("/store-user", (req, res) => {
   const username = req.body.username;
-  console.log(req.body);
+  const filePath = path.resolve(__dirname, "data", "users.json");
+  const fileData = fs.readFileSync(filePath);
+  const existingUsers = JSON.parse(fileData);
+  existingUsers.push(username);
+
+  fs.writeFileSync(filePath, JSON.stringify(existingUsers));
   res.send("<h1>Username stored!</h1>");
 });
 
