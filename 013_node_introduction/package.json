@@ -1,0 +1,14 @@
+{
+  "name": "013_node_introduction",
+  "version": "1.0.0",
+  "description": "Getting started with node and express!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
