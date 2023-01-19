@@ -10,7 +10,7 @@ routes.get("/currenttime", (req, res) =>
 
 routes.get("/", (req, res) => {
   res.send(
-    '<form action="/store-user" method="POST"><label>Your Name</label><input type="text" name="username"/><button>Submit</button></form>'
+    '<form action="/store-user" method="POST"><label>Your Name: </label><input type="text" name="username"/><button>Submit</button></form>'
   );
 }); //localhost:3000/
 
