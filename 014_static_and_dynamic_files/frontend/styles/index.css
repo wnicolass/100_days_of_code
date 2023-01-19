@@ -6,8 +6,8 @@ main {
 }
 
 main h1 {
-  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
-  color:rgb(202, 158, 62);
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  color: rgb(202, 158, 62);
 }
 
 main ul {
@@ -17,7 +17,7 @@ main ul {
   display: flex;
 }
 
-main li {
+#index-main li {
   width: 20rem;
   height: 10rem;
   border-radius: 6px;
