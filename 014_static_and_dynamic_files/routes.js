@@ -6,7 +6,20 @@ routes.get("/", (req, res) => {
 });
 
 routes.get("/restaurants", (req, res) => {
-  //   res.sendFile("/src/views/restaurants"); <- sendFile function can render html.
+  //   res.sendFile("/src/views/restaurants"); <- sendFile function can "render" html.
+  res.render("restaurants");
+});
+
+routes.get("/recommend", (req, res) => {
+  res.render("recommend");
+});
+
+routes.get("/confirm", (req, res) => {
+  res.render("confirm");
+});
+
+routes.get("/about", (req, res) => {
+  res.render("about");
 });
 
 module.exports = routes;
