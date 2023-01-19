@@ -6,7 +6,6 @@ routes.get("/", (req, res) => {
 });
 
 routes.get("/restaurants", (req, res) => {
-  //   res.sendFile("/src/views/restaurants"); <- sendFile function can "render" html.
   res.render("restaurants");
 });
 
