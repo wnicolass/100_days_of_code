@@ -1,16 +1,16 @@
-main {
+#index-main {
   width: 95%;
   max-width: 50rem;
   margin: 3rem auto;
   text-align: center;
 }
 
-main h1 {
+#index-main h1 {
   font-family: "Roboto Condensed", "Roboto", sans-serif;
   color: rgb(202, 158, 62);
 }
 
-main ul {
+#index-main ul {
   list-style: none;
   margin: 3rem 0;
   padding: 0;
@@ -25,7 +25,7 @@ main ul {
   overflow: hidden;
 }
 
-main li a {
+#index-main li a {
   height: 100%;
   width: 100%;
   display: flex;
@@ -39,7 +39,7 @@ main li a {
   box-sizing: border-box;
 }
 
-main li a:hover,
-main li a:active {
+#index-main li a:hover,
+#index-main li a:active {
   background-color: rgb(100, 81, 43);
 }
