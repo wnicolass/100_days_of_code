@@ -1,5 +1,7 @@
-const { application } = require("express");
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const filePath = path.join(__dirname, "data", "restaurants.json");
 const routes = express.Router();
 
 routes.get("/", (req, res) => {
@@ -19,8 +21,12 @@ routes.post("/recommend", (req, res) => {
   const restaurant = {
     [name]: restaurantInformation,
   };
+  const fileData = fs.readFileSync(filePath);
+  const existingRestaurants = JSON.parse(fileData);
+  existingRestaurants.push(restaurant);
 
-  console.log(restaurant);
+  fs.writeFileSync(filePath, JSON.stringify(existingRestaurants));
+  res.redirect("confirm");
 });
 
 routes.get("/confirm", (req, res) => {
