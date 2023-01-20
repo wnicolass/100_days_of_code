@@ -3,22 +3,25 @@
     <main>
       <h1>Recommended restaurants</h1>
       <p>Find your next favorite restaurants with help of our other users!</p>
+      <p>We found <%= numberOfRestaurants %> restaurants.</p>
       <ul id="restaurants-list">
-        <li class="restaurant-item">
-          <article>
-            <h2>Restaurant Title</h2>
-            <div class="restaurant-meta">
-              <p>Mexican</p>
-              <p>Address of the restaurant, including city</p>
-            </div>
-            <p>
-              A short description, explaining why this restaurant is awesome!
-            </p>
-            <div class="restaurant-actions">
-              <a href="">View Website</a>
-            </div>
-          </article>
-        </li>
+        <% existingRestaurants.forEach(restaurant => { %> 
+          <li class="restaurant-item">
+            <article>
+              <h2><%= restaurant.name %> </h2>
+              <div class="restaurant-meta">
+                <p><%= restaurant.cuisine %></p>
+                <p><%= restaurant.address %></p>
+              </div>
+              <p>
+                <%= restaurant.description %>
+              </p>
+              <div class="restaurant-actions">
+                <a href=""><%= restaurant.website %></a>
+              </div>
+            </article>
+          </li>
+        <% }) %> 
       </ul>
     </main>
   </body>

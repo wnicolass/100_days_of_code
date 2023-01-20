@@ -9,7 +9,12 @@ routes.get("/", (req, res) => {
 });
 
 routes.get("/restaurants", (req, res) => {
-  res.render("restaurants");
+  const fileData = fs.readFileSync(filePath);
+  const existingRestaurants = JSON.parse(fileData);
+  res.render("restaurants", {
+    numberOfRestaurants: existingRestaurants.length,
+    existingRestaurants,
+  });
 });
 
 routes.get("/recommend", (req, res) => {
@@ -17,10 +22,11 @@ routes.get("/recommend", (req, res) => {
 });
 
 routes.post("/recommend", (req, res) => {
-  const { name, ...restaurantInformation } = req.body;
-  const restaurant = {
-    [name]: restaurantInformation,
-  };
+  // const { name, ...restaurantInformation } = req.body;
+  // const restaurant = {
+  //   [name]: restaurantInformation,
+  // };
+  const restaurant = req.body;
   const fileData = fs.readFileSync(filePath);
   const existingRestaurants = JSON.parse(fileData);
   existingRestaurants.push(restaurant);
