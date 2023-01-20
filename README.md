@@ -277,3 +277,12 @@
 - Creating a custom server with Node :desktop_computer:
 - Handling Requests & Creating custom Responses
 ##
+### Day 48: Enhancing Node.js with Express
+- NPM
+- Handling requests and responses
+- Parsing user data and storing data in files with FS
+##
+### Day 49: Static & Dynamic Content
+- First exercise with express :space_invader:
+- Serving HTML files with Express
+##
