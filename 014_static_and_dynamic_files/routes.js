@@ -1,3 +1,4 @@
+const { application } = require("express");
 const express = require("express");
 const routes = express.Router();
 
@@ -11,6 +12,15 @@ routes.get("/restaurants", (req, res) => {
 
 routes.get("/recommend", (req, res) => {
   res.render("recommend");
+});
+
+routes.post("/recommend", (req, res) => {
+  const { name, ...restaurantInformation } = req.body;
+  const restaurant = {
+    [name]: restaurantInformation,
+  };
+
+  console.log(restaurant);
 });
 
 routes.get("/confirm", (req, res) => {
