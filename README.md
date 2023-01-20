@@ -286,3 +286,8 @@
 - First exercise with express :space_invader:
 - Serving HTML files with Express
 ##
+### Day 50: Dynamic Content :dizzy:
+- Serving static files
+- Adding EJS Template Engine `<%= hello %>`
+- Rendering dynamic content with templates
+##
