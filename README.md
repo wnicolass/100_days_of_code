@@ -291,3 +291,8 @@
 - Adding EJS Template Engine `<%= hello %>`
 - Rendering dynamic content with templates
 ##
+### Day 51: Partial Content & Dynamic Routes
+- EJS include
+- Dynamic Routes `/something/:uid`
+- Managing data with uid
+##
