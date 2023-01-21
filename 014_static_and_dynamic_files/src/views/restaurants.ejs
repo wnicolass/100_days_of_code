@@ -7,21 +7,7 @@
         <p>We found <%= numberOfRestaurants %> restaurants.</p>
         <ul id="restaurants-list">
           <% existingRestaurants.forEach(restaurant => { %> 
-            <li class="restaurant-item">
-              <article>
-                <h2><%= restaurant.name %> </h2>
-                <div class="restaurant-meta">
-                  <p><%= restaurant.cuisine %></p>
-                  <p><%= restaurant.address %></p>
-                </div>
-                <p>
-                  <%= restaurant.description %>
-                </p>
-                <div class="restaurant-actions">
-                  <a href="<%= restaurant.website %>">View Website</a>
-                </div>
-              </article>
-            </li>
+            <%- include('./includes/restaurants/restaurant-item.ejs', {restaurant}) %> 
           <% }) %> 
         </ul>
       <% } else { %>
