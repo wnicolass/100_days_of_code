@@ -1,10 +1,10 @@
 <%- include("./includes/head.ejs") %> 
 <%- include("./includes/aside.ejs") %> 
   <main>
-    <h1>restaurant title <%= restaurantId %></h1>
-    <p>Cuisine | Address</p>
-    <p>Description of the restaurant</p>
-    <p><a href="">View Website</a></p>
+    <h1><%= restaurantFound.name %></h1>
+    <p><%= restaurantFound.cuisine %> | <%= restaurantFound.address %></p>
+    <p><%= restaurantFound.description %></p>
+    <p><a href="<%= restaurantFound.website %>">View Website</a></p>
   </main>
 </body>
 </html>

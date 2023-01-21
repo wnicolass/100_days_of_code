@@ -20,7 +20,12 @@ routes.get("/restaurants", (req, res) => {
 
 routes.get("/restaurants/:id", (req, res) => {
   const restaurantId = req.params.id;
-  res.render("restaurant-detail", { restaurantId });
+  const fileData = fs.readFileSync(filePath);
+  const existingRestaurants = JSON.parse(fileData);
+  const restaurantFound = existingRestaurants.find(
+    (restaurant) => restaurant.id === restaurantId
+  );
+  res.render("restaurant-detail", { restaurantFound });
 });
 
 routes.get("/recommend", (req, res) => {
@@ -29,7 +34,7 @@ routes.get("/recommend", (req, res) => {
 
 routes.post("/recommend", (req, res) => {
   const restaurant = req.body;
-  restaurant.id = uuid.v4;
+  restaurant.id = uuid.v4();
   const fileData = fs.readFileSync(filePath);
   const existingRestaurants = JSON.parse(fileData);
   existingRestaurants.push(restaurant);
