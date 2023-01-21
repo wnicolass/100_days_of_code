@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const uuid = require("uuid");
 const filePath = path.join(__dirname, "data", "restaurants.json");
 const routes = express.Router();
 
@@ -28,6 +29,7 @@ routes.get("/recommend", (req, res) => {
 
 routes.post("/recommend", (req, res) => {
   const restaurant = req.body;
+  restaurant.id = uuid.v4;
   const fileData = fs.readFileSync(filePath);
   const existingRestaurants = JSON.parse(fileData);
   existingRestaurants.push(restaurant);

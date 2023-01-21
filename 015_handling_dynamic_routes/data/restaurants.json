@@ -1,5 +1,6 @@
 [
   {
+    "id": "r1",
     "name": "patricia bistro",
     "address": "milagres",
     "cuisine": "sea food",
@@ -7,6 +8,7 @@
     "description": "very good!"
   },
   {
+    "id": "r2",
     "name": "xing",
     "address": "xeng",
     "cuisine": "long",
@@ -14,6 +16,7 @@
     "description": "xeng long xing rin xong"
   },
   {
+    "id": "r3",
     "name": "divina gula",
     "address": "maceio",
     "cuisine": "general food",
