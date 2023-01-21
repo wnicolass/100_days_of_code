@@ -17,15 +17,16 @@ routes.get("/restaurants", (req, res) => {
   });
 });
 
+routes.get("/restaurants/:id", (req, res) => {
+  const restaurantId = req.params.id;
+  res.render("restaurant-detail", { restaurantId });
+});
+
 routes.get("/recommend", (req, res) => {
   res.render("recommend");
 });
 
 routes.post("/recommend", (req, res) => {
-  // const { name, ...restaurantInformation } = req.body;
-  // const restaurant = {
-  //   [name]: restaurantInformation,
-  // };
   const restaurant = req.body;
   const fileData = fs.readFileSync(filePath);
   const existingRestaurants = JSON.parse(fileData);
