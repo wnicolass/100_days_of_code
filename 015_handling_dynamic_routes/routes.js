@@ -21,7 +21,11 @@ routes.get("/restaurants/:id", (req, res) => {
   const restaurantFound = existingRestaurants.find(
     (restaurant) => restaurant.id === restaurantId
   );
-  return res.render("restaurant-detail", { restaurantFound });
+
+  if (restaurantFound) {
+    return res.render("restaurant-detail", { restaurantFound });
+  }
+  return res.render("404");
 });
 
 routes.get("/recommend", (req, res) => {
