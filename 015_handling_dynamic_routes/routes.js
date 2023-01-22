@@ -1,18 +1,15 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
 const uuid = require("uuid");
-const filePath = path.join(__dirname, "data", "restaurants.json");
+const Utils = require("./src/utils/Utils");
 const routes = express.Router();
 
 routes.get("/", (req, res) => {
-  res.render("index");
+  return res.render("index");
 });
 
 routes.get("/restaurants", (req, res) => {
-  const fileData = fs.readFileSync(filePath);
-  const existingRestaurants = JSON.parse(fileData);
-  res.render("restaurants", {
+  const existingRestaurants = Utils.getFileData();
+  return res.render("restaurants", {
     numberOfRestaurants: existingRestaurants.length,
     existingRestaurants,
   });
@@ -20,35 +17,34 @@ routes.get("/restaurants", (req, res) => {
 
 routes.get("/restaurants/:id", (req, res) => {
   const restaurantId = req.params.id;
-  const fileData = fs.readFileSync(filePath);
-  const existingRestaurants = JSON.parse(fileData);
+  const existingRestaurants = Utils.getFileData();
   const restaurantFound = existingRestaurants.find(
     (restaurant) => restaurant.id === restaurantId
   );
-  res.render("restaurant-detail", { restaurantFound });
+  return res.render("restaurant-detail", { restaurantFound });
 });
 
 routes.get("/recommend", (req, res) => {
-  res.render("recommend");
+  return res.render("recommend");
 });
 
 routes.post("/recommend", (req, res) => {
   const restaurant = req.body;
   restaurant.id = uuid.v4();
-  const fileData = fs.readFileSync(filePath);
-  const existingRestaurants = JSON.parse(fileData);
+  const existingRestaurants = Utils.getFileData();
+
   existingRestaurants.push(restaurant);
 
-  fs.writeFileSync(filePath, JSON.stringify(existingRestaurants));
-  res.redirect("confirm");
+  Utils.writeIntoFile(existingRestaurants);
+  return res.redirect("confirm");
 });
 
 routes.get("/confirm", (req, res) => {
-  res.render("confirm");
+  return res.render("confirm");
 });
 
 routes.get("/about", (req, res) => {
-  res.render("about");
+  return res.render("about");
 });
 
 module.exports = routes;
