@@ -8,7 +8,7 @@ routes.get("/", (req, res) => {
 });
 
 routes.get("/restaurants", (req, res) => {
-  const existingRestaurants = Utils.getFileData();
+  const existingRestaurants = Utils.getRestaurants();
   return res.render("restaurants", {
     numberOfRestaurants: existingRestaurants.length,
     existingRestaurants,
@@ -17,7 +17,7 @@ routes.get("/restaurants", (req, res) => {
 
 routes.get("/restaurants/:id", (req, res) => {
   const restaurantId = req.params.id;
-  const existingRestaurants = Utils.getFileData();
+  const existingRestaurants = Utils.getRestaurants();
   const restaurantFound = existingRestaurants.find(
     (restaurant) => restaurant.id === restaurantId
   );
@@ -35,11 +35,11 @@ routes.get("/recommend", (req, res) => {
 routes.post("/recommend", (req, res) => {
   const restaurant = req.body;
   restaurant.id = uuid.v4();
-  const existingRestaurants = Utils.getFileData();
+  const existingRestaurants = Utils.getRestaurants();
 
   existingRestaurants.push(restaurant);
 
-  Utils.writeIntoFile(existingRestaurants);
+  Utils.saveRestaurants(existingRestaurants);
   return res.redirect("confirm");
 });
 

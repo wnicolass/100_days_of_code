@@ -3,13 +3,13 @@ const path = require("path");
 
 module.exports = {
   path: path.resolve("data", "restaurants.json"),
-  getFileData() {
+  getRestaurants() {
     const fileData = fs.readFileSync(this.path);
     const existingRestaurants = JSON.parse(fileData);
     return existingRestaurants;
   },
 
-  writeIntoFile(fileToWrite) {
-    return fs.writeFileSync(this.path, JSON.stringify(fileToWrite));
+  saveRestaurants(storedRestaurants) {
+    return fs.writeFileSync(this.path, JSON.stringify(storedRestaurants));
   },
 };
