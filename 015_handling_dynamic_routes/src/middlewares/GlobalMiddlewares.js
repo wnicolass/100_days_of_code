@@ -1,8 +1,8 @@
 exports.inexistingRoutes = (req, res) => {
-  return res.render("404");
+  return res.status(404).render("404");
 };
 
 exports.serverError = (error, req, res, next) => {
   console.error(error);
-  res.render("500");
+  res.status(500).render("500");
 };

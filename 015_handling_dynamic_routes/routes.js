@@ -25,7 +25,7 @@ routes.get("/restaurants/:id", (req, res) => {
   if (restaurantFound) {
     return res.render("restaurant-detail", { restaurantFound });
   }
-  return res.render("404");
+  return res.status(404).render("404");
 });
 
 routes.get("/recommend", (req, res) => {
