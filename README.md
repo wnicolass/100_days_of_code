@@ -296,3 +296,9 @@
 - Dynamic Routes `/something/:uid`
 - Managing data with uid
 ##
+### Day 52: Handling Errors & Status Codes :red_circle:
+- Page Not Found (404)
+- Server-Side errors (500)
+- Working with status codes
+- Code refactoring
+##
