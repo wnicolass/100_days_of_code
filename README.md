@@ -302,3 +302,8 @@
 - Working with status codes
 - Code refactoring
 ##
+### Day 53: Refactoring and using express.Router()
+- Importing and Exporting with Node.js
+- Splitting routes in different files
+- Query params
+##
