@@ -6,8 +6,8 @@
         <p>Find your next favorite restaurants with help of our other users!</p>
         <p>We found <%= numberOfRestaurants %> restaurants.</p>
         <form action="/restaurants" method="GET">
-          <input type="hidden" value="asc" name="order"/>
-          <button class="btn">Change Order</button>
+          <input type="hidden" value="<%= nextOrder %>" name="order"/>
+          <button class="btn">Change Order: CURRENT ORDER -> <%= order || "RANDOM" %> </button>
         </form>
         <ul id="restaurants-list">
           <% existingRestaurants.forEach(restaurant => { %> 

@@ -4,18 +4,27 @@ const Utils = require("../src/utils/Utils");
 const router = express.Router();
 
 router.get("/restaurants", (req, res) => {
+  let order = req.query.order;
   const existingRestaurants = Utils.getRestaurants();
+  let nextOrder = order === "asc" ? "desc" : "asc";
 
-  existingRestaurants.sort((a, b) => {
-    if (a.name > b.name) {
-      return 1;
-    }
-    return -1;
-  });
+  if (order) {
+    existingRestaurants.sort((a, b) => {
+      if (
+        (order === "asc" && a.name > b.name) ||
+        (order === "desc" && b.name > a.name)
+      ) {
+        return 1;
+      }
+      return -1;
+    });
+  }
 
   return res.render("restaurants", {
     numberOfRestaurants: existingRestaurants.length,
     existingRestaurants,
+    nextOrder,
+    order,
   });
 });
 
