@@ -307,3 +307,8 @@
 - Splitting routes in different files
 - Query params
 ##
+### Day 54: New module: Advanced Javascript :tada:
+- Introduction
+- Functions & Default parameters
+- Rest parameter
+##
