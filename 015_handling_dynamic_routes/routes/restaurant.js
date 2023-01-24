@@ -5,6 +5,14 @@ const router = express.Router();
 
 router.get("/restaurants", (req, res) => {
   const existingRestaurants = Utils.getRestaurants();
+
+  existingRestaurants.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    return -1;
+  });
+
   return res.render("restaurants", {
     numberOfRestaurants: existingRestaurants.length,
     existingRestaurants,

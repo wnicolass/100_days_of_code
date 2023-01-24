@@ -1,1 +1,58 @@
-[{"id":"r1","name":"patricia bistro","address":"milagres","cuisine":"sea food","website":"https://patriciabistro.com","description":"very good!"},{"id":"r2","name":"xing","address":"xeng","cuisine":"long","website":"https://xing.com","description":"xeng long xing rin xong"},{"id":"r3","name":"divina gula","address":"maceio","cuisine":"general food","website":"https://generalfood.com","description":"very good too!"},{"name":"Munich Fines Restaurant","address":"Greatstreet 5, Munich","cuisine":"German","website":"https://test.com","description":"It's near my house!","id":"ab647da1-91f6-4049-b497-6692cc65aa5e"},{"name":"Fuso","address":"Portugal","cuisine":"Portuguese","website":"https://fuso.com","description":"bué bom","id":"5039f891-d667-4b69-8cb4-64d11f1283d0"},{"name":"Test","address":"test street, 25","cuisine":"test city","website":"https://testsite.com","description":"test description","id":"b1a9b3ad-aad5-4bdf-8bb5-837d90220794"},{"name":"test2","address":"test2street, 25","cuisine":"test food","website":"https://xing.com","description":"test2","id":"c0611814-efce-492f-aec8-994fb0e847a4"}]
+[
+  {
+    "id": "r1",
+    "name": "Patricia bistro",
+    "address": "milagres",
+    "cuisine": "sea food",
+    "website": "https://patriciabistro.com",
+    "description": "very good!"
+  },
+  {
+    "id": "r2",
+    "name": "Xing",
+    "address": "xeng",
+    "cuisine": "long",
+    "website": "https://xing.com",
+    "description": "xeng long xing rin xong"
+  },
+  {
+    "id": "r3",
+    "name": "Divina gula",
+    "address": "maceio",
+    "cuisine": "general food",
+    "website": "https://generalfood.com",
+    "description": "very good too!"
+  },
+  {
+    "name": "Munich Fines Restaurant",
+    "address": "Greatstreet 5, Munich",
+    "cuisine": "German",
+    "website": "https://test.com",
+    "description": "It's near my house!",
+    "id": "ab647da1-91f6-4049-b497-6692cc65aa5e"
+  },
+  {
+    "name": "Fuso",
+    "address": "Portugal",
+    "cuisine": "Portuguese",
+    "website": "https://fuso.com",
+    "description": "bué bom",
+    "id": "5039f891-d667-4b69-8cb4-64d11f1283d0"
+  },
+  {
+    "name": "Test",
+    "address": "test street, 25",
+    "cuisine": "test city",
+    "website": "https://testsite.com",
+    "description": "test description",
+    "id": "b1a9b3ad-aad5-4bdf-8bb5-837d90220794"
+  },
+  {
+    "name": "Test2",
+    "address": "test2street, 25",
+    "cuisine": "test food",
+    "website": "https://xing.com",
+    "description": "test2",
+    "id": "c0611814-efce-492f-aec8-994fb0e847a4"
+  }
+]
