@@ -5,7 +5,10 @@
       <% if (numberOfRestaurants > 0) { %> 
         <p>Find your next favorite restaurants with help of our other users!</p>
         <p>We found <%= numberOfRestaurants %> restaurants.</p>
-        <button class="btn">Change Order</button>
+        <form action="/restaurants" method="GET">
+          <input type="hidden" value="asc" name="order"/>
+          <button class="btn">Change Order</button>
+        </form>
         <ul id="restaurants-list">
           <% existingRestaurants.forEach(restaurant => { %> 
             <%- include('./includes/restaurants/restaurant-item.ejs', {restaurant}) %> 

@@ -2,7 +2,7 @@ main {
   max-width: 40rem;
 }
 
-form {
+#recommend-form {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: rgb(216, 190, 133);
