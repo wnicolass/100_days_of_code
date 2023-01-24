@@ -302,3 +302,13 @@
 - Working with status codes
 - Code refactoring
 ##
+### Day 53: Refactoring and using express.Router()
+- Importing and Exporting with Node.js
+- Splitting routes in different files
+- Query params
+##
+### Day 54: New module: Advanced Javascript :tada:
+- Introduction
+- Functions & Default parameters
+- Rest parameter
+##
