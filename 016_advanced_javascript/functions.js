@@ -1,7 +1,12 @@
 //default parameter value
-function greetUser(greetingPrefix, username = "User") {
-  console.log(`${greetingPrefix} ${username}`);
+const person = {
+  //   name: "John",
+  idade: 24,
+};
+
+function greetUser(person, username = "User") {
+  console.log(`Hello ${person?.name ?? username}`);
 }
 
-// greetUser("Hi");
-// greetUser("Hello", "Nicolas");
+// greetUser(person);
+// greetUser(person, "Nicolas");
