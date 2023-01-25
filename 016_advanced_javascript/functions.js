@@ -25,4 +25,6 @@ function sumUp(...numbers) {
 const inputNumbers = [1, 2, 3, 4, 5, 6];
 
 //spread
-console.log(sumUp(...inputNumbers));
+// console.log(sumUp(...inputNumbers));
+
+console.log(sumUp);
