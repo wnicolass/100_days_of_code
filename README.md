@@ -318,3 +318,8 @@
 - Scoping
 - Constructor Functions & Classes
 ##
+### Day 56: Asynchronous Javascript
+- Callbacks
+- Promises
+- Async-await
+##
