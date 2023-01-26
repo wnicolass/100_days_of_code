@@ -318,8 +318,9 @@
 - Scoping
 - Constructor Functions & Classes
 ##
-### Day 56: Asynchronous Javascript
+### Day 56: Asynchronous Javascript & Introducing Databases
 - Callbacks
 - Promises
 - Async-await
+- What are databases?
 ##
