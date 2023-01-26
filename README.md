@@ -312,3 +312,9 @@
 - Functions & Default parameters
 - Rest parameter
 ##
+### Day 55: Closer look at functions and Objects
+- Default parameters & Rest parameters
+- Primitive vs Reference Data Types
+- Scoping
+- Constructor Functions & Classes
+##
