@@ -324,3 +324,9 @@
 - Async-await
 - What are databases?
 ##
+### Day 57: SQL Databases vs NoSQL Databases
+- Difference between the two databases systems
+- What is SQL?
+- MySQL
+- Creating database with MySQL
+##
