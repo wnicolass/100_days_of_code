@@ -330,3 +330,9 @@
 - MySQL
 - Creating database with MySQL
 ##
+### Day 58: Creating Tables & CRUD Operations
+- Inserting data into a table
+- Reading data
+- Updating data
+- Deleting data
+##
