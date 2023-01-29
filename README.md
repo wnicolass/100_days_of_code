@@ -336,3 +336,9 @@
 - Updating data
 - Deleting data
 ##
+### Day 59: Relating Data
+- One-To-Many
+- One-To-One
+- Many-To-Many
+- Joining tables
+##
