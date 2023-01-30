@@ -318,3 +318,27 @@
 - Scoping
 - Constructor Functions & Classes
 ##
+### Day 56: Asynchronous Javascript & Introducing Databases
+- Callbacks
+- Promises
+- Async-await
+- What are databases?
+##
+### Day 57: SQL Databases vs NoSQL Databases
+- Difference between the two databases systems
+- What is SQL?
+- MySQL
+- Creating database with MySQL
+##
+### Day 58: Creating Tables & CRUD Operations
+- Inserting data into a table
+- Reading data
+- Updating data
+- Deleting data
+##
+### Day 59: Relating Data
+- One-To-Many
+- One-To-One
+- Many-To-Many
+- Joining tables
+##
