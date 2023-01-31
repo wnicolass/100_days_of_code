@@ -347,3 +347,8 @@
 - Creating database structure
 - Creating first routes
 ##
+### Day 61: Connecting to database using MySQL2
+- Connecting to database
+- Inserting data with placeholders
+- Fetching & displaying a list of blog posts
+##
