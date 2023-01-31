@@ -11,8 +11,8 @@ router.get("/posts", (req, res) => {
 });
 
 router.get("/new-post", async (req, res) => {
-  const authors = await db.query();
-  res.render("create-post");
+  const [authors] = await db.query("SELECT * FROM authors");
+  res.render("create-post", { authors });
 });
 
 module.exports = router;
