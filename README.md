@@ -342,3 +342,8 @@
 - Many-To-Many
 - Joining tables
 ##
+### Day 60: NodeJS with MySQL :dolphin:
+- Start new project with node and mysql :tada:
+- Creating database structure
+- Creating first routes
+##
