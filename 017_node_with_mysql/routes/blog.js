@@ -56,8 +56,36 @@ router.get("/details/:id", async (req, res) => {
       day: "numeric",
     }),
   };
-  console.log(post);
   return res.render("post-detail", { post });
+});
+
+router.get("/edit/:id", async (req, res) => {
+  const postId = req.params.id;
+  const query = `
+            SELECT id, title, summary, body FROM posts
+            WHERE posts.id = ?`;
+  const [postData] = await db.query(query, [postId]);
+
+  if (!postData || postData.length === 0) {
+    return res.status(404).render("404");
+  }
+
+  res.render("update-post", { post: postData[0] });
+});
+
+router.post("/update/:id", async (req, res) => {
+  const { title, summary, content } = req.body;
+  const query = `
+    UPDATE posts SET title = ?, summary = ?, body = ?
+    WHERE id = ?     
+  `;
+  await db.query(query, [title, summary, content, req.params.id]);
+  res.redirect("/posts");
+});
+
+router.post("/posts/:id/delete", async (req, res) => {
+  await db.query("DELETE FROM posts WHERE id = ?", [req.params.id]);
+  res.redirect("/posts");
 });
 
 module.exports = router;
