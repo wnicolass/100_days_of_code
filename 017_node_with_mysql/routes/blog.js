@@ -46,8 +46,18 @@ router.get("/details/:id", async (req, res) => {
     return res.status(404).render("404");
   }
 
-  console.log(postData);
-  return res.render("post-detail", { post: postData[0] });
+  const post = {
+    ...postData[0],
+    date: postData[0].created_at.toISOString(),
+    humanReadableDate: postData[0].created_at.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
+  };
+  console.log(post);
+  return res.render("post-detail", { post });
 });
 
 module.exports = router;
