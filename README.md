@@ -352,3 +352,13 @@
 - Inserting data with placeholders
 - Fetching & displaying a list of blog posts
 ##
+### Day 62: Fetching & Displaying a Single Blog Post
+- Formatting Data
+- Updating posts
+- Deleting posts
+##
+### Day 63: NoSQL & MongoDB :leaves:
+- The Idea Behind NoSQL Databases
+- Introducing MondoDB
+- Inserting data with MongoDB
+##
