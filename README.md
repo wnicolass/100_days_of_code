@@ -362,3 +362,9 @@
 - Introducing MondoDB
 - Inserting data with MongoDB
 ##
+### Day 64: CRUD with MongoDB
+- Reading & Filtering documents
+- Updating documents
+- Deleting documents
+- Practicing
+##
