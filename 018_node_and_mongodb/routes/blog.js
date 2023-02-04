@@ -1,17 +1,19 @@
-const express = require('express');
+const express = require("express");
+const db = require("../database/config");
 
 const router = express.Router();
 
-router.get('/', function(req, res) {
-  res.redirect('/posts');
+router.get("/", function (req, res) {
+  res.redirect("/posts");
 });
 
-router.get('/posts', function(req, res) {
-  res.render('posts-list');
+router.get("/posts", function (req, res) {
+  res.render("posts-list");
 });
 
-router.get('/new-post', async function(req, res) {
-  res.render('create-post');
+router.get("/new-post", async function (req, res) {
+  const authors = await db.getDb().collection("authors").find().toArray();
+  res.render("create-post", { authors });
 });
 
 module.exports = router;
