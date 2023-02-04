@@ -368,3 +368,9 @@
 - Deleting documents
 - Practicing
 ##
+### Day 65: NodeJS and MongoDB :leaves:
+- Planning database structure
+- Connecting to MongoDB
+- Fetching & Displaying authors' data
+- Inserting new documents
+##
