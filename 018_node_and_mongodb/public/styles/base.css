@@ -1,7 +1,7 @@
 /* Base styles & resets */
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   color: rgb(46, 45, 48);
 }
 
@@ -16,15 +16,16 @@ main {
 
 a {
   text-decoration: none;
-  color:rgb(89, 0, 255);
+  color: #177650;
 }
 
 a:hover,
 a:active {
-  color:rgb(232, 90, 245);
+  color: rgb(232, 90, 245);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,8 +36,8 @@ ul, ol {
 .btn {
   cursor: pointer;
   font: inherit;
-  background-color: rgb(89, 0, 255);
-  border: 1px solid rgb(89, 0, 255);
+  background-color: #177650;
+  border: 1px solid #177650;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
@@ -44,27 +45,27 @@ ul, ol {
 
 .btn:hover,
 .btn:active {
-  background-color: rgb(71, 4, 196);
-  border-color: rgb(71, 4, 196);
+  background-color: #177650;
+  border-color: #177650;
   color: white;
 }
 
 .btn.btn-alt {
-  background-color: transparent; 
+  background-color: transparent;
   border-color: transparent;
-  color:rgb(89, 0, 255);
+  color: #177650;
 }
 
 .btn.btn-alt:hover,
 .btn.btn-alt:active {
-  color:rgb(232, 90, 245);
+  color: rgb(232, 90, 245);
 }
 
 /* Site-wide content / elements */
 
 #main-header {
   padding: 2rem 10%;
-  background-color: rgb(89, 0, 255);
+  background-color: #177650;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +75,7 @@ ul, ol {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #main-header ul {
@@ -92,5 +93,5 @@ ul, ol {
 
 #main-header nav a:hover,
 #main-header nav a:active {
-  color:rgb(255, 217, 0);
+  color: rgb(255, 217, 0);
 }
