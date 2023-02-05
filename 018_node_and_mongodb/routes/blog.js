@@ -9,23 +9,31 @@ router.get("/", function (req, res) {
 });
 
 router.get("/posts", async function (req, res) {
-  const posts = await db
-    .getDb()
-    .collection("posts")
-    .find({})
-    .project({ title: 1, summary: 1, "author.name": 1 })
-    .toArray();
-  res.render("posts-list", { posts });
+  try {
+    const posts = await db
+      .getDb()
+      .collection("posts")
+      .find({})
+      .project({ title: 1, summary: 1, "author.name": 1 })
+      .toArray();
+    return res.render("posts-list", { posts });
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
+  }
 });
 
 router.get("/posts/:id", async (req, res) => {
   const postId = new ObjectId(req.params.id);
-  const post = await db
-    .getDb()
-    .collection("posts")
-    .findOne({ _id: postId }, { projection: { summary: 0 } });
+  let post;
 
-  if (!post) {
+  try {
+    post = await db
+      .getDb()
+      .collection("posts")
+      .findOne({ _id: postId }, { projection: { summary: 0 } });
+  } catch (err) {
+    console.error(err.message);
     return res.status(404).render("404");
   }
 
@@ -35,22 +43,34 @@ router.get("/posts/:id", async (req, res) => {
     month: "long",
     day: "numeric",
   });
-  res.render("post-detail", { post });
+  return res.render("post-detail", { post });
 });
 
 router.get("/new-post", async function (req, res) {
-  const authors = await db.getDb().collection("authors").find().toArray();
-  res.render("create-post", { authors });
+  try {
+    const authors = await db.getDb().collection("authors").find().toArray();
+    return res.render("create-post", { authors });
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
+  }
 });
 
 router.post("/posts", async (req, res) => {
   const { title, summary, content } = req.body;
-  const authorId = new ObjectId(req.body.author);
-  const author = await db
-    .getDb()
-    .collection("authors")
-    .findOne({ _id: authorId });
-  const newPost = {
+  let author;
+  let newPost;
+  let authorId;
+
+  try {
+    authorId = new ObjectId(req.body.author);
+    author = await db.getDb().collection("authors").findOne({ _id: authorId });
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
+  }
+
+  newPost = {
     title,
     summary,
     content,
@@ -62,27 +82,34 @@ router.post("/posts", async (req, res) => {
     },
   };
 
-  const result = await db.getDb().collection("posts").insertOne(newPost);
-  if (result) {
-    return res.redirect("posts");
+  try {
+    const result = await db.getDb().collection("posts").insertOne(newPost);
+    if (result) {
+      return res.redirect("posts");
+    }
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
   }
 });
 
 router.get("/posts/:id/edit", async (req, res) => {
-  const postId = new ObjectId(req.params.id);
-  const post = await db
-    .getDb()
-    .collection("posts")
-    .findOne(
-      { _id: postId },
-      { projection: { title: 1, summary: 1, content: 1 } }
-    );
-
-  if (!post) {
-    res.status(404).render("404");
+  let post;
+  try {
+    const postId = new ObjectId(req.params.id);
+    post = await db
+      .getDb()
+      .collection("posts")
+      .findOne(
+        { _id: postId },
+        { projection: { title: 1, summary: 1, content: 1 } }
+      );
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
   }
 
-  res.render("update-post", { post });
+  return res.render("update-post", { post });
 });
 
 router.post("/posts/:id/edit", async (req, res) => {
