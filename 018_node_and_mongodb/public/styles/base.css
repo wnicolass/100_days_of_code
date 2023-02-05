@@ -21,7 +21,7 @@ a {
 
 a:hover,
 a:active {
-  color: rgb(232, 90, 245);
+  color: rgb(4, 255, 0);
 }
 
 ul,
@@ -58,7 +58,7 @@ ol {
 
 .btn.btn-alt:hover,
 .btn.btn-alt:active {
-  color: rgb(232, 90, 245);
+  color: rgb(4, 255, 0);
 }
 
 /* Site-wide content / elements */
