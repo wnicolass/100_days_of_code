@@ -81,21 +81,14 @@ router.get("/posts/:id/edit", async (req, res) => {
   if (!post) {
     res.status(404).render("404");
   }
-  console.log(post);
-
-  // const udpatedPost = await db
-  //   .getDb()
-  //   .collection("posts")
-  //   .updateOne({ _id: new ObjectId(postToUpdateId) },
-  //               {'$set': {}});
 
   res.render("update-post", { post });
 });
 
 router.post("/posts/:id/edit", async (req, res) => {
-  const postId = new ObjectId(req.params.id);
   const { title, summary, content } = req.body;
   try {
+    const postId = new ObjectId(req.params.id);
     await db.getDb().collection("posts").updateOne(
       { _id: postId },
       {
@@ -108,11 +101,23 @@ router.post("/posts/:id/edit", async (req, res) => {
       }
     );
 
-    res.redirect("/posts");
+    return res.redirect("/posts");
   } catch (err) {
     console.error(err.message);
-    res.status(500).render("500");
+    return res.status(404).render("404");
   }
+});
+
+router.post("/posts/:id/delete", async (req, res) => {
+  try {
+    const postIdToDelete = new ObjectId(req.params.id);
+    await db.getDb().collection("posts").deleteOne({ _id: postIdToDelete });
+  } catch (err) {
+    console.error(err.message);
+    return res.status(404).render("404");
+  }
+
+  return res.redirect("/posts");
 });
 
 module.exports = router;
