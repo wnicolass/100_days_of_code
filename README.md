@@ -374,3 +374,9 @@
 - Fetching & Displaying authors' data
 - Inserting new documents
 ##
+### Day 66: Updating & Deleting with MongoDB and NodeJS
+- Fetching and Displaying projected data
+- Transforming the createdAt field
+- Updating documents
+- Deleting documents
+##
