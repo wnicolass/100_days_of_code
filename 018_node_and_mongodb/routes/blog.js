@@ -68,4 +68,51 @@ router.post("/posts", async (req, res) => {
   }
 });
 
+router.get("/posts/:id/edit", async (req, res) => {
+  const postId = new ObjectId(req.params.id);
+  const post = await db
+    .getDb()
+    .collection("posts")
+    .findOne(
+      { _id: postId },
+      { projection: { title: 1, summary: 1, content: 1 } }
+    );
+
+  if (!post) {
+    res.status(404).render("404");
+  }
+  console.log(post);
+
+  // const udpatedPost = await db
+  //   .getDb()
+  //   .collection("posts")
+  //   .updateOne({ _id: new ObjectId(postToUpdateId) },
+  //               {'$set': {}});
+
+  res.render("update-post", { post });
+});
+
+router.post("/posts/:id/edit", async (req, res) => {
+  const postId = new ObjectId(req.params.id);
+  const { title, summary, content } = req.body;
+  try {
+    await db.getDb().collection("posts").updateOne(
+      { _id: postId },
+      {
+        $set: {
+          title,
+          summary,
+          content,
+          // createdAt: new Date()
+        },
+      }
+    );
+
+    res.redirect("/posts");
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).render("500");
+  }
+});
+
 module.exports = router;
