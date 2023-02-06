@@ -380,3 +380,9 @@
 - Updating documents
 - Deleting documents
 ##
+### Day 67: Adding File Upload :file_folder:
+- Two Sides of Uploading files
+- Parsing incoming file with multer package
+- How to store files on a backend
+- Configuring Multer In-Depth
+##
