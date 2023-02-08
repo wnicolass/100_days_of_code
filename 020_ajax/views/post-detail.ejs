@@ -19,7 +19,7 @@
       </section>
       <hr />
       <section>
-        <p id="body"><%= post.body %></p>
+        <p id="body"><%= post.content %></p>
       </section>
       <section id="comments">
         <% if (!comments) { %>
@@ -31,15 +31,13 @@
           <button class="btn btn-alt">Load Comments</button>
         </form>
         <% } else if (comments.length === 0) { %>
-          <p>No comments found.</p>
+        <p>No comments found.</p>
         <% } else { %>
-          <ol>
-            <% for (const comment of comments) { %>
-              <li>
-                <%- include('includes/comment-item', { comment: comment }) %>
-              </li>
-            <% } %>
-          </ol>
+        <ol>
+          <% for (const comment of comments) { %>
+          <li><%- include('includes/comment-item', { comment: comment }) %></li>
+          <% } %>
+        </ol>
         <% } %>
       </section>
       <section id="comments-form">
