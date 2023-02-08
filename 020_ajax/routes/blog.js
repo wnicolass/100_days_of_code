@@ -116,14 +116,13 @@ router.post("/posts/:id/delete", async function (req, res) {
 
 router.get("/posts/:id/comments", async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const post = await db.getDb().collection("posts").findOne({ _id: postId });
   const comments = await db
     .getDb()
     .collection("comments")
     .find({ postId: postId })
     .toArray();
 
-  return res.render("post-detail", { post: post, comments: comments });
+  return res.json(comments);
 });
 
 router.post("/posts/:id/comments", async function (req, res) {
