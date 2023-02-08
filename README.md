@@ -386,3 +386,8 @@
 - How to store files on a backend
 - Configuring Multer In-Depth
 ##
+### Day 68: Serving uploaded files and Introducing AJAX
+- Adding an image preview feature
+- Why would we need AJAX?
+- What is AJAX?
+##
