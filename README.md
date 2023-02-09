@@ -391,3 +391,8 @@
 - Why would we need AJAX?
 - What is AJAX?
 ##
+### Day 69: Get & Post with fetch()
+- Sending a GET request with ajax
+- Updating the DOM based on the response
+- Sending a POST request with ajax
+##
