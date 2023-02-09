@@ -26,6 +26,12 @@ async function fetchCommentsForPost() {
 
   try {
     const res = await fetch(`/posts/${postId}/comments`);
+
+    if (!res.ok) {
+      alert("Fetching comments failed!");
+      return;
+    }
+
     const data = await res.json();
 
     if (data.length === 0) {
@@ -41,7 +47,7 @@ async function fetchCommentsForPost() {
   }
 }
 
-function saveComment(event) {
+async function saveComment(event) {
   event.preventDefault();
 
   const postId = commentsFormEl.dataset.postid;
@@ -49,18 +55,22 @@ function saveComment(event) {
     title: commentTitleEl.value,
     text: commentTextEl.value,
   };
-  fetch(`/posts/${postId}/comments`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(comment),
-  })
-    .then(() => {
-      fetchCommentsForPost();
-      commentsFormEl.reset();
-    })
-    .catch((err) => console.error(err.message));
+  try {
+    const res = await fetch(`/posts/${postId}/comments`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(comment),
+    });
+    if (!res.ok) {
+      return alert("Something went wrong!");
+    }
+    fetchCommentsForPost();
+    commentsFormEl.reset();
+  } catch (err) {
+    console.log(err.message);
+  }
 }
 
 loadCommentsBtn.addEventListener("click", fetchCommentsForPost);
