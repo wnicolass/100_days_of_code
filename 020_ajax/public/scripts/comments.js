@@ -44,17 +44,15 @@ async function saveComment(event) {
     title: commentTitleEl.value,
     text: commentTextEl.value,
   };
-  try {
-    await fetch(`/posts/${postId}/comments`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(comment),
-    });
-  } catch (err) {
-    console.error(err.message);
-  }
+  await fetch(`/posts/${postId}/comments`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(comment),
+  })
+    .then(() => fetchCommentsForPost())
+    .catch((err) => console.error(err.message));
 }
 
 loadCommentsBtn.addEventListener("click", fetchCommentsForPost);

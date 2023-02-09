@@ -35,7 +35,7 @@ router.post("/posts", async function (req, res) {
   const newPost = {
     title: req.body.title,
     summary: req.body.summary,
-    body: req.body.content,
+    content: req.body.content,
     createdAt: new Date(),
     author: {
       id: authorId,
@@ -96,7 +96,7 @@ router.post("/posts/:id/edit", async function (req, res) {
         $set: {
           title: req.body.title,
           summary: req.body.summary,
-          body: req.body.content,
+          content: req.body.content,
           // date: new Date()
         },
       }
