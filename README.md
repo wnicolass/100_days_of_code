@@ -396,3 +396,9 @@
 - Updating the DOM based on the response
 - Sending a POST request with ajax
 ##
+### Day 70: Handling Errors & Start Authentication module
+- Handling errors with ajax requests
+- More HTTP methods: PUT, PATCH and DELETE
+- What is user authentication?
+- Basic Signup Functionality
+##
