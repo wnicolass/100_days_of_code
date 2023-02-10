@@ -11,7 +11,7 @@ const MongoStore = mongodbStore(session);
 const app = express();
 
 const sessionStore = new MongoStore({
-  uri: "localhost:27017",
+  uri: "mongodb://localhost:27017",
   databaseName: "auth-demo",
   collection: "sessions",
 });
