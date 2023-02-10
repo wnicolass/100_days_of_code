@@ -402,3 +402,9 @@
 - What is user authentication?
 - Basic Signup Functionality
 ##
+### Day 71: Working with sessions
+- Hashing Passwords
+- Login functionality
+- Validating Signup Information
+- Introducing Sessions & Cookies :cookie:
+##
