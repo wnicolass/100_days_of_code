@@ -75,8 +75,10 @@ router.post("/login", async function (req, res) {
     return res.redirect("/login");
   }
 
-  console.log("User is authenticated");
-  return res.redirect("/admin");
+  // saving session and authenticating user
+  req.session.user = { id: existingUser._id, email: existingUser.email };
+  req.session.isAuthenticated = true;
+  req.session.save(() => res.redirect("/admin"));
 });
 
 router.get("/admin", function (req, res) {
