@@ -408,3 +408,9 @@
 - Validating Signup Information
 - Introducing Sessions & Cookies :cookie:
 ##
+### Day 72: Sessions & Cookies :cookie:
+- Storing authentication data in sessions
+- Using sessions and cookies for controlling access
+- Closer look at cookies
+- Sessions beyond authentication (e.g. flash messages)
+##
