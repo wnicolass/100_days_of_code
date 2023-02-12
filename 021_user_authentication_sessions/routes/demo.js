@@ -25,7 +25,17 @@ router.get("/signup", function (req, res) {
 });
 
 router.get("/login", function (req, res) {
-  res.render("login");
+  let sessionInputData = req.session.inputData;
+  if (!sessionInputData) {
+    sessionInputData = {
+      hasError: false,
+      email: "",
+      password: "",
+    };
+  }
+
+  req.session.inputData = null;
+  res.render("login", { sessionInputData });
 });
 
 router.post("/signup", async function (req, res) {
@@ -56,8 +66,16 @@ router.post("/signup", async function (req, res) {
     .collection("users")
     .findOne({ email: email });
   if (existingUser) {
-    console.error("User already exists!");
-    return res.redirect("/signup");
+    req.session.inputData = {
+      hasError: true,
+      message: "User already exists - Choose another email.",
+      email,
+      confirmEmail,
+      password,
+    };
+
+    req.session.save(() => res.redirect("/signup"));
+    return;
   }
 
   const salt = await bcrypt.genSalt();
@@ -81,8 +99,14 @@ router.post("/login", async function (req, res) {
     .findOne({ email: email });
 
   if (!existingUser) {
-    console.error("Could not login!");
-    return res.redirect("/login");
+    req.session.inputData = {
+      hasError: true,
+      message: "Could not log you in - Check your credentials!",
+      email,
+      password,
+    };
+    req.session.save(() => res.redirect("/login"));
+    return;
   }
 
   const isPasswordsEqual = await bcrypt.compare(
@@ -90,8 +114,14 @@ router.post("/login", async function (req, res) {
     existingUser.password
   );
   if (!isPasswordsEqual) {
-    console.error("Could not login - passwords are not equal!");
-    return res.redirect("/login");
+    req.session.inputData = {
+      hasError: true,
+      message: "Could not log you in - Check your credentials!",
+      email,
+      password,
+    };
+    req.session.save(() => res.redirect("/login"));
+    return;
   }
 
   // saving session and authenticating user
