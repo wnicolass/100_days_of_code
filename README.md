@@ -414,3 +414,8 @@
 - Closer look at cookies
 - Sessions beyond authentication (e.g. flash messages)
 ##
+### Day 73: More about session & Using `res.locals`
+- Authentication vs Authorization
+- Practicing with sessions
+- Custom middlewares + `res.locals`
+##
