@@ -419,3 +419,9 @@
 - Practicing with sessions
 - Custom middlewares + `res.locals`
 ##
+### Day 74: Website Security
+- Authentication vs Website Security
+- Attacker pov :ninja:
+- Understanding CSRF Attacks
+- Understanding XSS Attacks
+##
