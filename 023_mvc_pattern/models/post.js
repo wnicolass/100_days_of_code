@@ -28,6 +28,17 @@ class Post {
 
     return updatedPost;
   }
+
+  async delete() {
+    if (!this.id) {
+      return;
+    }
+    const deletedPost = await db
+      .getDb()
+      .collection("posts")
+      .deleteOne({ _id: this.id });
+    return deletedPost;
+  }
 }
 
 module.exports = Post;
