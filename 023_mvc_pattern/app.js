@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const db = require("./database/database");
-const routes = require("./routes/demo");
+const blogRoutes = require("./routes/blog");
+const authRoutes = require("./routes/auth");
 const session = require("express-session");
 const mongodbStore = require("connect-mongodb-session");
 const MongoDBStore = mongodbStore(session);
@@ -44,7 +45,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(routes);
+app.use(blogRoutes);
+app.use(authRoutes);
 app.use(function (error, req, res, next) {
   console.log(error.message);
   res.render("500");
