@@ -7,6 +7,8 @@ const authRoutes = require("./routes/auth");
 const session = require("express-session");
 const { createSessionStore, sessionConfig } = require("./configs/session");
 const mongoDbSessionStore = createSessionStore(session);
+const authMiddleware = require("./middlewares/auth-middleware");
+const serverErrorHandler = require("./middlewares/server-error-middleware");
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
@@ -15,25 +17,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(session(sessionConfig(mongoDbSessionStore)));
 
-app.use((req, res, next) => {
-  const user = req.session.user;
-  const isAuth = req.session.isAuthenticated;
-
-  if (!user || !isAuth) {
-    return next();
-  }
-
-  res.locals.isAuth = isAuth;
-
-  next();
-});
+app.use(authMiddleware);
 
 app.use(blogRoutes);
 app.use(authRoutes);
-app.use(function (error, req, res, next) {
-  console.log(error.message);
-  res.render("500");
-});
+app.use(serverErrorHandler);
 
 db.connectToDb().then(() =>
   app.listen(3000, () => console.log("Server running on port 3000"))
