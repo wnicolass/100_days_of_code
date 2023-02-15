@@ -5,32 +5,15 @@ const db = require("./database/database");
 const blogRoutes = require("./routes/blog");
 const authRoutes = require("./routes/auth");
 const session = require("express-session");
-const mongodbStore = require("connect-mongodb-session");
-const MongoDBStore = mongodbStore(session);
-const sessionStore = new MongoDBStore({
-  uri: "mongodb://localhost:27017",
-  databaseName: "mvc",
-  collection: "sessions",
-});
+const { createSessionStore, sessionConfig } = require("./configs/session");
+const mongoDbSessionStore = createSessionStore(session);
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
 app.use(express.static(path.resolve("public")));
 app.use(express.urlencoded({ extended: true }));
 
-const expiryDate = 1000 * 60 * 60 * 24 * 7;
-app.use(
-  session({
-    secret: "hiper-secret",
-    resave: false,
-    saveUninitialized: false,
-    store: sessionStore,
-    cookie: {
-      maxAge: expiryDate,
-      httpOnly: true,
-    },
-  })
-);
+app.use(session(sessionConfig(mongoDbSessionStore)));
 
 app.use((req, res, next) => {
   const user = req.session.user;
