@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const db = require("../database/database");
 const { ObjectId } = require("mongodb");
+const Post = require("../models/post");
 
 router.get("/", (req, res) => {
   res.render("welcome");
@@ -42,9 +43,9 @@ router.post("/posts", async (req, res) => {
     return res.redirect("back");
   }
 
-  const newPost = { title, content };
+  const post = new Post(title, content);
+  await post.save();
 
-  await db.getDb().collection("posts").insertOne(newPost);
   return res.redirect("back");
 });
 
@@ -71,28 +72,23 @@ router.get("/posts/:id/edit", async (req, res) => {
 });
 
 router.post("/posts/:id/edit", async (req, res) => {
-  const { id: postId } = req.params;
+  const { id } = req.params;
   const { title, content } = req.body;
 
   if (!title || !content || title.trim() === "" || content.trim() === "") {
     req.session.inputData = {
       hasError: true,
       message: "Invalid input - please check your data.",
-      title: enteredTitle,
-      content: enteredContent,
+      title,
+      content,
     };
 
     res.redirect(`/posts/${req.params.id}/edit`);
     return;
   }
 
-  await db
-    .getDb()
-    .collection("posts")
-    .updateOne(
-      { _id: new ObjectId(postId) },
-      { $set: { title: title, content: content } }
-    );
+  const post = new Post(title, content, id);
+  await post.update();
   res.redirect("/admin");
 });
 
