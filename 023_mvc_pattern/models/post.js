@@ -10,6 +10,24 @@ class Post {
     }
   }
 
+  static async fetchAll() {
+    const posts = await db.getDb().collection("posts").find().toArray();
+    return posts;
+  }
+
+  async fetchOne() {
+    if (!this.id) {
+      return;
+    }
+
+    const postDocument = await db
+      .getDb()
+      .collection("posts")
+      .findOne({ _id: this.id });
+    this.title = postDocument.title;
+    this.content = postDocument.content;
+  }
+
   async save() {
     const newPost = { title: this.title, content: this.content };
 
