@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const db = require("./database/database");
-const blogRoutes = require("./routes/blog");
+const postRoutes = require("./routes/post");
 const authRoutes = require("./routes/auth");
 const session = require("express-session");
 const { createSessionStore, sessionConfig } = require("./configs/session");
@@ -19,7 +19,7 @@ app.use(session(sessionConfig(mongoDbSessionStore)));
 
 app.use(authMiddleware);
 
-app.use(blogRoutes);
+app.use(postRoutes);
 app.use(authRoutes);
 app.use(serverErrorHandler);
 
