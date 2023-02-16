@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "csrf-csrf": "^2.2.3",
-    "csurf": "^1.11.0"
-  }
-}
