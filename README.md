@@ -425,3 +425,14 @@
 - Understanding CSRF Attacks
 - Understanding XSS Attacks
 ##
+### Day 75: SQL Injection and Introducing MVC Pattern
+- Understanding SQL Injection Attacks
+- Protecting against SQL Injection
+- Introducing MVC (Model-View-Controller)
+##
+### Day 76: MVC and Refactoring
+- Creating Middlewares
+- Creating Models
+- Spliting code into different files
+- Add crud functionalities to Model
+##
