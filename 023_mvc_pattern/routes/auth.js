@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const db = require("../database/database");
 const bcrypt = require("bcryptjs");
+const User = require("../models/user");
 
 router.get("/signup", (req, res) => {
   let sessionInputData = req.session.inputData;
@@ -39,12 +39,7 @@ router.post("/signup", async (req, res) => {
     return;
   }
 
-  const existingUser = await db
-    .getDb()
-    .collection("users")
-    .findOne({ email: email });
-
-  if (existingUser) {
+  if (await User.alreadyExists(email)) {
     req.session.inputData = {
       hasError: true,
       message: "User already exists!",
@@ -61,12 +56,8 @@ router.post("/signup", async (req, res) => {
   const salt = await bcrypt.genSalt();
   const hashedPassword = await bcrypt.hash(password, salt);
 
-  const user = {
-    email,
-    password: hashedPassword,
-  };
-
-  await db.getDb().collection("users").insertOne(user);
+  const user = new User(email, hashedPassword);
+  user.save();
 
   res.redirect("login");
 });
@@ -89,10 +80,7 @@ router.get("/login", (req, res) => {
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
-  const existingUser = await db
-    .getDb()
-    .collection("users")
-    .findOne({ email: email });
+  const existingUser = await User.alreadyExists(email);
 
   if (!existingUser) {
     req.session.inputData = {
@@ -102,7 +90,7 @@ router.post("/login", async (req, res) => {
       password,
     };
 
-    req.session.save((req, res) => {
+    req.session.save(() => {
       res.redirect("back");
     });
     return;
