@@ -1,4 +1,9 @@
 const Post = require("../models/post");
+const {
+  getSessionErrorData,
+  flashErrorsToSession,
+} = require("../utils/session-validation");
+const { isValidPost } = require("../utils/validation");
 
 class PostController {
   getHome(req, res) {
@@ -11,17 +16,10 @@ class PostController {
     }
 
     const posts = await Post.fetchAll();
-    let sessionInputData = req.session.inputData;
-
-    if (!sessionInputData) {
-      sessionInputData = {
-        hasError: false,
-        title: "",
-        content: "",
-      };
-    }
-
-    req.session.inputData = null;
+    const sessionInputData = getSessionErrorData(req, {
+      title: "",
+      content: "",
+    });
 
     res.render("admin", { posts: posts, inputData: sessionInputData });
   }
@@ -29,15 +27,15 @@ class PostController {
   async createPost(req, res) {
     const { title, content } = req.body;
 
-    if (!title || !content || title.trim() === "" || content.trim() === "") {
-      req.session.inputData = {
-        hasError: true,
-        message: "Invalid input - please check your data.",
-        title: title,
-        content: content,
-      };
-
-      return res.redirect("back");
+    if (!isValidPost(req.body)) {
+      flashErrorsToSession(
+        req,
+        { title, content, message: "Invalid input data - Check your data." },
+        () => {
+          res.redirect("back");
+        }
+      );
+      return;
     }
 
     const post = new Post(title, content);
@@ -55,16 +53,10 @@ class PostController {
       return res.status(404).render("404");
     }
 
-    let sessionInputData = req.session.inputData;
-    if (!sessionInputData) {
-      sessionInputData = {
-        hasError: false,
-        title: post.title,
-        content: post.content,
-      };
-    }
-
-    req.session.inputData = null;
+    const sessionInputData = getSessionErrorData(req, {
+      title: post.title,
+      content: post.content,
+    });
 
     res.render("single-post", { post: post, inputData: sessionInputData });
   }
@@ -73,15 +65,19 @@ class PostController {
     const { id } = req.params;
     const { title, content } = req.body;
 
-    if (!title || !content || title.trim() === "" || content.trim() === "") {
-      req.session.inputData = {
-        hasError: true,
-        message: "Invalid input - please check your data.",
-        title,
-        content,
-      };
+    if (!isValidPost(req.body)) {
+      flashErrorsToSession(
+        req,
+        {
+          message: "Invalid input - please check your data.",
+          title,
+          content,
+        },
+        () => {
+          res.redirect(`/posts/${req.params.id}/edit`);
+        }
+      );
 
-      res.redirect(`/posts/${req.params.id}/edit`);
       return;
     }
 
