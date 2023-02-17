@@ -1,10 +1,12 @@
 const User = require("../models/user");
-const bcrypt = require("bcryptjs");
 const {
   getSessionErrorData,
   flashErrorsToSession,
 } = require("../utils/session-validation");
 const { isValidUserData } = require("../utils/validation");
+const { doubleCsrf } = require("csrf-csrf");
+const { options } = require("../configs/csrfOptions");
+const { generateToken } = doubleCsrf(options);
 
 class UserController {
   getRegisterView(req, res) {
@@ -13,8 +15,10 @@ class UserController {
       confirmEmail: "",
       password: "",
     });
+    const csrfToken = generateToken(res, req);
     res.render("signup", {
       inputData: sessionInputData,
+      csrfToken,
     });
   }
 
@@ -65,8 +69,8 @@ class UserController {
       email: "",
       password: "",
     });
-
-    res.render("login", { inputData: sessionInputData });
+    const csrfToken = generateToken(res, req);
+    res.render("login", { inputData: sessionInputData, csrfToken });
   }
 
   async login(req, res) {
