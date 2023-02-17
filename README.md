@@ -441,3 +441,8 @@
 - Refactoring sessions & input validations
 - Adding double csrf token protection
 ##
+### Day 78: Protecting routes & Starting the main project of the course
+- Protecting routes with custom middlewares
+- Planning the project
+- Course project setup
+##
