@@ -4,6 +4,9 @@ const {
   flashErrorsToSession,
 } = require("../utils/session-validation");
 const { isValidPost } = require("../utils/validation");
+const { doubleCsrf } = require("csrf-csrf");
+const { options } = require("../configs/csrfOptions");
+const { generateToken } = doubleCsrf(options);
 
 class PostController {
   getHome(req, res) {
@@ -20,8 +23,12 @@ class PostController {
       title: "",
       content: "",
     });
-
-    res.render("admin", { posts: posts, inputData: sessionInputData });
+    const csrfToken = generateToken(res, req);
+    res.render("admin", {
+      posts: posts,
+      inputData: sessionInputData,
+      csrfToken,
+    });
   }
 
   async createPost(req, res) {
@@ -57,8 +64,12 @@ class PostController {
       title: post.title,
       content: post.content,
     });
-
-    res.render("single-post", { post: post, inputData: sessionInputData });
+    const csrfToken = generateToken(res, req);
+    res.render("single-post", {
+      post: post,
+      inputData: sessionInputData,
+      csrfToken,
+    });
   }
 
   async updatePost(req, res) {

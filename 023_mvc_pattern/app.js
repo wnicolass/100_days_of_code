@@ -9,6 +9,7 @@ const { createSessionStore, sessionConfig } = require("./configs/session");
 const mongoDbSessionStore = createSessionStore(session);
 const authMiddleware = require("./middlewares/auth-middleware");
 const serverErrorHandler = require("./middlewares/server-error-middleware");
+const cookieParser = require("cookie-parser");
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
@@ -16,6 +17,7 @@ app.use(express.static(path.resolve("public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session(sessionConfig(mongoDbSessionStore)));
+app.use(cookieParser("some-secret-here"));
 
 app.use(authMiddleware);
 

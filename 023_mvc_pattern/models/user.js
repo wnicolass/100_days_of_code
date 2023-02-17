@@ -1,14 +1,10 @@
-const { ObjectId } = require("mongodb");
 const db = require("../database/database");
+const bcrypt = require("bcryptjs");
 
 class User {
-  constructor(email, password, id) {
+  constructor(email, password) {
     this.email = email;
     this.password = password;
-
-    if (id) {
-      this.id = new ObjectId(id);
-    }
   }
 
   static async alreadyExists(email) {
@@ -18,13 +14,24 @@ class User {
   }
 
   async save() {
-    const newUser = { email: this.email, password: this.password };
+    const salt = await bcrypt.genSalt();
+    const hashedPassword = await bcrypt.hash(this.password, salt);
+    const newUser = { email: this.email, password: hashedPassword };
 
     const insertedUser = await db
       .getDb()
       .collection("users")
       .insertOne(newUser);
     return insertedUser;
+  }
+
+  async login(comparePassword) {
+    const arePasswordsEqual = await bcrypt.compare(
+      this.password,
+      comparePassword
+    );
+
+    return arePasswordsEqual;
   }
 }
 

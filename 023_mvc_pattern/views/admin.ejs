@@ -13,7 +13,9 @@
         hasError: inputData.hasError, 
         errorMessage: inputData.message, 
         title: inputData.title, 
-        content: inputData.content }) 
+        content: inputData.content,
+        token: csrfToken 
+      }) 
       %>
     </section>
     <section>
@@ -23,7 +25,7 @@
       <% } else { %>
         <ul id="posts-list">
           <% for (const post of posts) { %>
-            <%- include('includes/post-item', { title: post.title, postId: post._id }) %>
+            <%- include('includes/post-item', { title: post.title, postId: post._id, token: csrfToken }) %>
           <% } %>
         </ul>
       <% } %>
