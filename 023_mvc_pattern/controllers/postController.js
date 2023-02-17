@@ -51,9 +51,15 @@ class PostController {
     return res.redirect("back");
   }
 
-  async getSinglePost(req, res) {
-    const id = req.params;
-    const post = new Post(null, null, id);
+  async getSinglePost(req, res, next) {
+    const { id } = req.params;
+    let post;
+    try {
+      post = new Post(null, null, id);
+    } catch (err) {
+      return res.status(404).render("404");
+    }
+
     await post.fetchOne();
 
     if (!post.title || !post.content) {
