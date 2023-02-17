@@ -436,3 +436,8 @@
 - Spliting code into different files
 - Add crud functionalities to Model
 ##
+### Day 77: Controllers & More Refactoring :recycle:
+- Adding a first controller
+- Refactoring sessions & input validations
+- Adding double csrf token protection
+##
