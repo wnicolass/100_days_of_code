@@ -9,6 +9,10 @@ const { options } = require("../configs/csrfOptions");
 const { generateToken } = doubleCsrf(options);
 
 class UserController {
+  get401(req, res) {
+    return res.status(401).render("401");
+  }
+
   getRegisterView(req, res) {
     const sessionInputData = getSessionErrorData(req, {
       email: "",

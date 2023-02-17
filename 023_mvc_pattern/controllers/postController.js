@@ -14,17 +14,13 @@ class PostController {
   }
 
   async getAdmin(req, res) {
-    if (!res.locals.isAuth) {
-      return res.status(401).render("401");
-    }
-
     const posts = await Post.fetchAll();
     const sessionInputData = getSessionErrorData(req, {
       title: "",
       content: "",
     });
     const csrfToken = generateToken(res, req);
-    res.render("admin", {
+    return res.render("admin", {
       posts: posts,
       inputData: sessionInputData,
       csrfToken,
@@ -100,7 +96,7 @@ class PostController {
 
     const post = new Post(title, content, id);
     await post.update();
-    res.redirect("/admin");
+    return res.redirect("/admin");
   }
 
   async deletePost(req, res) {

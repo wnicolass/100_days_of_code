@@ -9,5 +9,6 @@ router.post("/signup", doubleCsrfProtection, userController.register);
 router.get("/login", userController.getLoginView);
 router.post("/login", doubleCsrfProtection, userController.login);
 router.post("/logout", userController.logout);
+router.get("/401", userController.get401);
 
 module.exports = router;

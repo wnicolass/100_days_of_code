@@ -21,8 +21,8 @@ app.use(cookieParser("some-secret-here"));
 
 app.use(authMiddleware);
 
-app.use(postRoutes);
 app.use(authRoutes);
+app.use(postRoutes);
 app.use(serverErrorHandler);
 
 db.connectToDb().then(() =>
