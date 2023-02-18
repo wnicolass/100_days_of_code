@@ -446,3 +446,9 @@
 - Planning the project
 - Course project setup
 ##
+### Day 79: First view & Start working on CSS base styles
+- Adding EJS and First Views
+- Structuring First View & Creating general includes
+- Creating base CSS files
+- Adding CSS Custom Properties
+##
