@@ -452,3 +452,8 @@
 - Creating base CSS files
 - Adding CSS Custom Properties
 ##
+### Day 80: Sign Up View & Connecting with database
+- End general styles
+- Style sign up form
+- Connect to mongodb with mongoose
+##
