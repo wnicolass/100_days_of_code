@@ -457,3 +457,14 @@
 - Style sign up form
 - Connect to mongodb with mongoose
 ##
+### Day 81: Sign Up/Login & CSRF
+- Adding user signup
+- Protecting signup and login routes with csrf token
+- Using the default express error handler
+- Introducing sessions
+### Day 82: Configuring sessions & Implementing authentication
+- Checking the user authentication status with a middleware
+- Adding logout functionality
+- Handling errors in async code
+- Validating user inputs
+##
