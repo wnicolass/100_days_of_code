@@ -468,3 +468,8 @@
 - Handling errors in async code
 - Validating user inputs
 ##
+### Day 83: Flashing errors to users
+- Displaying error messages and saving user input
+- Admin authorization and protected navigation
+- Setting up base navigation styles
+##
