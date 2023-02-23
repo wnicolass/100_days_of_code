@@ -473,3 +473,8 @@
 - Admin authorization and protected navigation
 - Setting up base navigation styles
 ##
+### Day 84: Making the website responsive :iphone:
+- Building a responsive website
+- Frontend JavaScript for toggling the sidebar
+- Adding a Product Admin page & Forms
+##
