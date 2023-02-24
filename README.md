@@ -478,3 +478,8 @@
 - Frontend JavaScript for toggling the sidebar
 - Adding a Product Admin page & Forms
 ##
+### Day 85: Image Upload
+- Adding the image upload functionality
+- Adding a Product Model & Storing products in the database
+- Fetching & Outputting Product Items
+##
