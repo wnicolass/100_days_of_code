@@ -483,3 +483,8 @@
 - Adding a Product Model & Storing products in the database
 - Fetching & Outputting Product Items
 ##
+### Day 86: Working on product items
+- Styling product items
+- Adding product details view
+- Updating product (as admin)
+##
