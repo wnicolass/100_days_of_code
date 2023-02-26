@@ -488,3 +488,8 @@
 - Adding product details view
 - Updating product (as admin)
 ##
+### Day 87: Image preview & Making products deletable
+- Adding a File Upload preview
+- Making Products Deletable
+- Using AJAX & Updating the DOM
+##
