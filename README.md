@@ -493,3 +493,8 @@
 - Making Products Deletable
 - Using AJAX & Updating the DOM
 ##
+### Day 88: Various fixes & Proper route protection
+- Protecting admin routes
+- Outputting products for customers
+- Outputting product details
+##
