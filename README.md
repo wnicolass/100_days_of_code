@@ -498,3 +498,8 @@
 - Outputting products for customers
 - Outputting product details
 ##
+### Day 89: Cart Logic
+- Adding a Cart Model
+- Working on the shopping cart logic
+- Adding cart items via AJAX requests
+##
