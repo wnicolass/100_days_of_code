@@ -503,3 +503,18 @@
 - Working on the shopping cart logic
 - Adding cart items via AJAX requests
 ##
+### Day 90: Start working on Cart
+- Adding a cart page
+- Styling the cart page
+- Updating cart quantities via AJAX requests
+##
+### Day 91: More DOM & Start working on Orders
+- Updating the DOM after Cart Item updates
+- Adding the Order Controller & Model
+- Saving Orders in the database
+### Day 92: Ending project
+- Displaying Orders (for Customers & Admins)
+- Managing Orders as an Admin
+- Keeping cart items information always updated
+- End project. Repo link [here](https://github.com/wnicolass/online-shop)
+##
