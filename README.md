@@ -512,9 +512,15 @@
 - Updating the DOM after Cart Item updates
 - Adding the Order Controller & Model
 - Saving Orders in the database
+##
 ### Day 92: Ending project
 - Displaying Orders (for Customers & Admins)
 - Managing Orders as an Admin
 - Keeping cart items information always updated
 - End project. Repo link [here](https://github.com/wnicolass/online-shop)
+##
+### Day 93: Adding Stripe Payments :money_with_wings:
+- What are Services and APIs
+- Introducing Stripe (Payments Service)
+- Configuring the Stripe request & Handling Payments
 ##
