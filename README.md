@@ -524,3 +524,9 @@
 - Introducing Stripe (Payments Service)
 - Configuring the Stripe request & Handling Payments
 ##
+### Day 94: Deploying websites
+- Static vs Dynamic Websites
+- Hosting databases
+- Testing & Env Variables
+- Cross Browser Support & SEO
+##
