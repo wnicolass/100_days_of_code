@@ -530,3 +530,9 @@
 - Testing & Env Variables
 - Cross Browser Support & SEO
 ##
+### Day 95: Finish module about Deployment & Introducing APIs
+- Improving performance and shrinking assets
+- API & Services: What & Why
+- JS Packages VS URL-based APIs
+- API vs Traditional Websites
+##
