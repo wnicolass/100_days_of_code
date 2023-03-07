@@ -436,3 +436,103 @@
 - Spliting code into different files
 - Add crud functionalities to Model
 ##
+### Day 77: Controllers & More Refactoring :recycle:
+- Adding a first controller
+- Refactoring sessions & input validations
+- Adding double csrf token protection
+##
+### Day 78: Protecting routes & Starting the main project of the course
+- Protecting routes with custom middlewares
+- Planning the project
+- Course project setup
+##
+### Day 79: First view & Start working on CSS base styles
+- Adding EJS and First Views
+- Structuring First View & Creating general includes
+- Creating base CSS files
+- Adding CSS Custom Properties
+##
+### Day 80: Sign Up View & Connecting with database
+- End general styles
+- Style sign up form
+- Connect to mongodb with mongoose
+##
+### Day 81: Sign Up/Login & CSRF
+- Adding user signup
+- Protecting signup and login routes with csrf token
+- Using the default express error handler
+- Introducing sessions
+### Day 82: Configuring sessions & Implementing authentication
+- Checking the user authentication status with a middleware
+- Adding logout functionality
+- Handling errors in async code
+- Validating user inputs
+##
+### Day 83: Flashing errors to users
+- Displaying error messages and saving user input
+- Admin authorization and protected navigation
+- Setting up base navigation styles
+##
+### Day 84: Making the website responsive :iphone:
+- Building a responsive website
+- Frontend JavaScript for toggling the sidebar
+- Adding a Product Admin page & Forms
+##
+### Day 85: Image Upload
+- Adding the image upload functionality
+- Adding a Product Model & Storing products in the database
+- Fetching & Outputting Product Items
+##
+### Day 86: Working on product items
+- Styling product items
+- Adding product details view
+- Updating product (as admin)
+##
+### Day 87: Image preview & Making products deletable
+- Adding a File Upload preview
+- Making Products Deletable
+- Using AJAX & Updating the DOM
+##
+### Day 88: Various fixes & Proper route protection
+- Protecting admin routes
+- Outputting products for customers
+- Outputting product details
+##
+### Day 89: Cart Logic
+- Adding a Cart Model
+- Working on the shopping cart logic
+- Adding cart items via AJAX requests
+##
+### Day 90: Start working on Cart
+- Adding a cart page
+- Styling the cart page
+- Updating cart quantities via AJAX requests
+##
+### Day 91: More DOM & Start working on Orders
+- Updating the DOM after Cart Item updates
+- Adding the Order Controller & Model
+- Saving Orders in the database
+##
+### Day 92: Ending project
+- Displaying Orders (for Customers & Admins)
+- Managing Orders as an Admin
+- Keeping cart items information always updated
+- End project. Repo link [here](https://github.com/wnicolass/online-shop)
+##
+### Day 93: Adding Stripe Payments :money_with_wings:
+- What are Services and APIs
+- Introducing Stripe (Payments Service)
+- Configuring the Stripe request & Handling Payments
+##
+### Day 94: Deploying websites
+- Static vs Dynamic Websites
+- Hosting databases
+- Testing & Env Variables
+- Cross Browser Support & SEO
+##
+### Day 95: Finish module about Deployment & Introducing APIs
+- Improving performance and shrinking assets
+- API & Services: What & Why
+- JS Packages VS URL-based APIs
+- API vs Traditional Websites
+##
