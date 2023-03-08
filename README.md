@@ -542,3 +542,9 @@
 - Enhacing the API & Making it more realistic
 - Starting another API example
 ##
+### Day 97: Ending the REST API
+- Finishing endpoints
+- Testing with insomnia
+- Using a decoupled frontend website (SPA)
+- Fixing CORS errors
+##
