@@ -28,6 +28,31 @@ exports.getAllTodos = async (req, res, next) => {
   }
 };
 
-exports.updateTodo = function (req, res, next) {};
+exports.updateTodo = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { newText } = req.body;
 
-exports.deleteTodo = function (req, res, next) {};
+    const todo = new Todo(newText, id);
+    await todo.update();
+    return res.status(200).json({
+      message: "Todo updated!",
+      updatedTodo: todo,
+    });
+  } catch (err) {
+    return next(err);
+  }
+};
+
+exports.deleteTodo = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const todo = new Todo(null, id);
+    await todo.delete();
+    return res.status(200).json({
+      message: "Todo deleted!",
+    });
+  } catch (err) {
+    return next(err);
+  }
+};

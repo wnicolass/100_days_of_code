@@ -18,7 +18,7 @@ class Todo {
   static async getTodos() {
     const todosDocs = await db.getDb().collection("todos").find().toArray();
 
-    return todosDocs.map((todoDoc) => new Todo(todoDoc._id, todoDoc.text));
+    return todosDocs.map((todoDoc) => new Todo(todoDoc.text, todoDoc._id));
   }
 
   update() {
