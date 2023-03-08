@@ -536,3 +536,9 @@
 - JS Packages VS URL-based APIs
 - API vs Traditional Websites
 ##
+### Day 96: Creating a REST API
+- Introducing REST APIs
+- Building a first basic REST API
+- Enhacing the API & Making it more realistic
+- Starting another API example
+##
