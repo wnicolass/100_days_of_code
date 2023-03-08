@@ -10,6 +10,7 @@ app.use(function (error, req, res, next) {
   res.status(500).json({
     message: "Something went wrong!",
   });
+  console.log(error);
 });
 
 db.initDb()

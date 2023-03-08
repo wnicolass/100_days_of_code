@@ -1,6 +1,6 @@
 const Todo = require("../models/todo.model");
 
-exports.addTodo = async function (req, res, next) {
+exports.addTodo = async (req, res, next) => {
   const { text: todoText } = req.body;
   const todo = new Todo(todoText);
 
@@ -17,9 +17,9 @@ exports.addTodo = async function (req, res, next) {
   }
 };
 
-exports.getAllTodos = async function (req, res, next) {
+exports.getAllTodos = async (req, res, next) => {
   try {
-    const todos = await Todo.getAllTodos();
+    const todos = await Todo.getTodos();
     return res.status(200).json({
       todos,
     });
