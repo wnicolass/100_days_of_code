@@ -548,3 +548,8 @@
 - Using a decoupled frontend website (SPA)
 - Fixing CORS errors
 ##
+### Day 98: Introducing Javascript Web Frameworks
+- Why use web frameworks?
+- Getting started with Vue.js
+- Listening to events & Updating data
+##
