@@ -553,3 +553,11 @@
 - Getting started with Vue.js
 - Listening to events & Updating data
 ##
+### Day 99: Managing data with Vue.js
+- Outputting lists of data
+- Displaying content condtionally
+- Sending HTTP requests
+##
+### Day 100: Course completed :tada:
+- Now it's time to focus on creating projects!
+##
