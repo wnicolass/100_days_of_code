@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./scripts/app.js" defer></script>
   </head>
   <body>
@@ -24,9 +24,10 @@
         </form>
       </section>
       <section id="todos">
-        <p v-if="todos.length === 0">
+        <p v-if="todos.length === 0 && !isLoading">
           No todos added yet - Maybe start adding some?
         </p>
+        <p v-else-if="isLoading">Loading...</p>
         <ul v-else id="todos-list">
           <li v-for="todo in todos">
             <p>{{ todo.text }}</p>
