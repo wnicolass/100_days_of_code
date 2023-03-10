@@ -12,8 +12,7 @@ const TodosApp = {
     saveTodo(event) {
       event.preventDefault();
       if (this.editedTodoId) {
-        this.updateTodo();
-        return;
+        return this.updateTodo();
       }
       const newTodo = {
         text: this.enteredTodoText,
@@ -42,6 +41,9 @@ const TodosApp = {
       this.todos[todoIndex] = updatedTodoItem;
       this.editedTodoId = null;
       this.enteredTodoText = "";
+    },
+    deleteTodo(todoId) {
+      this.todos = this.todos.filter((item) => item.id !== todoId);
     },
   },
 };

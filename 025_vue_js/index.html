@@ -32,7 +32,7 @@
             <p>{{ todo.text }}</p>
             <div>
               <button @click="startEditTodo(todo.id)">Edit</button>
-              <button>Delete</button>
+              <button @click="deleteTodo(todo.id)">Delete</button>
             </div>
           </li>
         </ul>
