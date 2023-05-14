@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:dev": "node --test --watch test/api.test.js",
-    "test": "node --test api.test.js",
+    "test": "node --test test/api.test.js",
     "start": "nodemon app.js"
   },
   "keywords": [],
