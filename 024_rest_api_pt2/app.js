@@ -17,8 +17,11 @@ app.use(function (error, req, res, next) {
 
 db.initDb()
   .then(function () {
-    app.listen(3000);
+    app.listen(3001);
   })
   .catch(function (error) {
+    console.error(error);
     console.log("Connecting to the database failed!");
   });
+
+module.exports = app;
