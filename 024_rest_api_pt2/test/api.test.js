@@ -55,5 +55,15 @@ describe('API Workflow', () => {
         strictEqual(responseData.message,'Todo updated!');
     });
 
+    it('should delete a todo and return success message', async () => {
+        const response = await fetch(`${BASE_URL}/todos/${todoId}`, {
+            method: 'DELETE',
+        });
+        strictEqual(response.status, 200);
+        const responseData = await response.json();
+        ok(typeof responseData.message === 'string');
+        strictEqual(responseData.message,'Todo deleted!');
+    });
+
     after(done => server.close(done));
 })
