@@ -24,7 +24,6 @@ describe('API Workflow', () => {
         });
         strictEqual(response.status, 201);
         const responseData = await response.json();
-        console.log(responseData);
     });
 
     it('should return a list of todo objects', async () => {
